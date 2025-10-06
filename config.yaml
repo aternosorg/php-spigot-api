@@ -1,0 +1,6 @@
+invokerPackage: Aternos\SpigotApi
+artifactVersion: 1.0.0
+generatorName: php-nextgen
+outputDir: .
+sourceFolder: src
+inputSpec: https://raw.githubusercontent.com/SpigotMC/XenforoResourceManagerAPI/refs/heads/master/src/openapi.yaml

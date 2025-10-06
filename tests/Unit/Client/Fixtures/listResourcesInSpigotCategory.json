@@ -1,0 +1,375 @@
+[
+    {
+        "id": 59824,
+        "title": "AntiBookCrash",
+        "tag": "Dieses Plugin fixt den neuen Crasher!",
+        "current_version": "1.0",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": "legacy",
+        "supported_minecraft_versions": [
+            "1.8"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/59/59824.jpg?1534221908",
+        "author": {
+            "id": 538582,
+            "username": "ImZeroYT"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 227,
+            "updates": 0,
+            "reviews": {
+                "unique": 7,
+                "total": 7
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1534221885,
+        "last_update": 1534221885,
+        "description": "Dieses Plugin funktioniert nicht."
+    },
+    {
+        "id": 27396,
+        "title": "SkyWars Team",
+        "tag": "SWT MINIGAME",
+        "current_version": "BETA 0.0.1",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.7",
+            "1.8",
+            "1.9",
+            "1.10"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 246057,
+            "username": "DenisMac"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 259,
+            "updates": 0,
+            "reviews": {
+                "unique": 6,
+                "total": 6
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1470263579,
+        "last_update": 1470263579,
+        "description": "[FONT=Arial][SIZE=7][COLOR=#ffff4d]                     SKYWARS TEAM\n\nBETA 0.0.1[/COLOR][/SIZE][/FONT]\n[LIST]\n[*][SIZE=5][COLOR=#4d4dff]NEW UPDATES INCOMMING[/COLOR][/SIZE]\n[*][FONT=Georgia][SIZE=7][COLOR=#b35900]PLEASE NOT DOWNLOAD NOW IS BETA. Useless plugin.[/COLOR][/SIZE][/FONT]\n[/LIST]\n[IMG]http://image.prntscr.com/image/3731426289944a3c86a7851599e6c433.png[/IMG]"
+    },
+    {
+        "id": 31322,
+        "title": "VipGM",
+        "tag": "VipGM - Gamemode für VIP's",
+        "current_version": "2.0.1",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.8",
+            "1.9"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 290834,
+            "username": "TheSchebbi"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 688,
+            "updates": 4,
+            "reviews": {
+                "unique": 12,
+                "total": 12
+            },
+            "rating": "1.7"
+        },
+        "external_download_url": "",
+        "first_release": 1478309223,
+        "last_update": 1478479700,
+        "description": "[B]VipGM - Gamemode für VIP's![/B]\n\nDieses Plugin ist ein sehr simples,\nwas Vip/Premium User z.b in der Lobby Gamemode 0-3 gewährt.\n\n[B][U]Kommandos:[/U]\n/help VipGM [/B]\u003C Hilfe\n[B]/VipGM [/B]\u003C Zeigt dir an wie man das Kommando benutzt!\n[B]/VipGM 0-3 [/B]\u003C Haupt Kommando!\n\n[B][U]Permissions:[/U]\n- VIP.gm \u003C [/B]Standart Permission. Kann man absofort auch ändern in der Config! [B][I]NEU!\n[/I]\n[U]Config!:[/U] [I]Neu\n- [/I]Permission \u003C einstellbar!\n- [VipGM] \u003C einstellbar!\n- Keine Permission Nachricht \u003C einstellbar![/B]\n\n[B][U]Sprachen/Languages:[/U]\n- Deutsch/German\n\n[B][U]TO-DO!:[/U]\n- GUI\n- Mehr dinge in der Config einstellbar!\n- Vieleicht Englisch/English![/B]\n[/B]\n\n[B][U]Fragen und Support:[/U][/B]\nFalls ihr fragen oder Verbesserungsvorschläge habt schreibt es in die Kommentare!"
+    },
+    {
+        "id": 4228,
+        "title": "Skript Night  Vision With No Particle Effects!",
+        "tag": "Night Vision that's given Silently to players for Unlimited Time On Join!",
+        "current_version": "1.0",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": null,
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 44182,
+            "username": "deathcaptain"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 1187,
+            "updates": 0,
+            "reviews": {
+                "unique": 5,
+                "total": 5
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1424499758,
+        "last_update": 1424499758,
+        "description": "[B]To install:[/B]\nDownload: winrar\n\nFirst put the skript plugin in your plugins folder.\nSecond put the skript directory file in your plugins folder.\nthird put the potioneffects.sh directory Skripts\u003EScripts\nthen restart your server Do Not /Reload\nupon installing you can do /skript reload all\nEnjoy Particle Free unlimited Night Vision!\n\nAnd That's it! you're all done!\n\n[B]Check Out play.sencegaming.net![/B]"
+    },
+    {
+        "id": 12582,
+        "title": "KitPvP",
+        "tag": "KitPvP",
+        "current_version": "2015-09-25",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": null,
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 105906,
+            "username": "Tias_992"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 210,
+            "updates": 0,
+            "reviews": {
+                "unique": 5,
+                "total": 5
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1443182430,
+        "last_update": 1443182430,
+        "description": "This is a TEST-Plugin. But it not uppdated to 1.8, this pluin is on 1.5! :(\nBut Im gonna make more plugins!\nHave a nice day"
+    },
+    {
+        "id": 36310,
+        "title": "Advanced NoCheat Reload",
+        "tag": "AntiCheat",
+        "current_version": "2017-2-14",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 317505,
+            "username": "Freddytsoi"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 1307,
+            "updates": 1,
+            "reviews": {
+                "unique": 5,
+                "total": 5
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1487036176,
+        "last_update": 1487037739,
+        "description": "[IMG]http://i.imgur.com/eqSFZfd.png[/IMG]\n\n[B]Introduction[/B]\nAdvanced NoCheat attempts to prevent cheat clients from exploiting weaknesses of Minecraft or its protocol, making your server more safe. Checks cover a wide range of issues including flying and speeding, fighting hacks, fast block breaking and nukers, inventory hacks, chat spam and other types of malicious behaviour.\n[B]Download[/B]\nThis plugin need [B][SIZE=6][URL='https://www.spigotmc.org/resources/protocollib.1997/']ProtocolLib[/URL].\nIf you want the AdvancedNoCheatPlus\nLink:[URL='https://www.spigotmc.org/resources/ntac-advanced-nocheatplus-patchwork-spigot-1-9.22746/']NTAC[/URL][/SIZE]\nMODULES ARE BLOCKED:[/B]\n[LIST]\n[*][B]  autoArmor[/B]\n[*][B]  autoclicker[/B]\n[*][B]  autospawn[/B]\n[*][B]  BadPackets(regen,step....)[/B]\n[*][B]  BedMove[B](LongJump,AirMove,Hop,Blink....)[/B][/B]\n[*][B][B]  reach[/B][/B]\n[*][B][B]  Crash head[/B][/B]\n[*][B][B]  Criticals[/B][/B]\n[*][B][B]  FastClimb[/B][/B]\n[*][B][B]  FastPlace[/B][/B]\n[*][B][B]  Headless[/B][/B]\n[*][B][B]  Killaura(AntiBot,Speed)[/B][/B]\n[*][B][B]  NoSlowDown[/B][/B]\n[*][B][B]  NoSwing[/B][/B]\n[*][B][B]  Speed(BHop,Tick)[/B][/B]\n[*][B][B]  Fly(Bypass,Vanilla)[/B][/B]\n[/LIST]"
+    },
+    {
+        "id": 88081,
+        "title": "Voxel-AntiCrash The best innovative AntiExploit plugin!",
+        "tag": "Protects your server from exploits with this professional AntiCrash system for FREE.",
+        "current_version": "1.0",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": "legacy",
+        "supported_minecraft_versions": [
+            "1.7",
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 1180137,
+            "username": "VoxelSquad_"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 261,
+            "updates": 0,
+            "reviews": {
+                "unique": 10,
+                "total": 10
+            },
+            "rating": "1.8"
+        },
+        "external_download_url": "",
+        "first_release": 1611142841,
+        "last_update": 1611142841,
+        "description": "INFORMATION\nVoxel-AntiCrash is an advanced plugin that protects your server against all kinds of crashes and exploits.\nIt is much better than the competition (ExploitFixer, SpigotGuard, and others\nOur Discord: [URL]https://discord.gg/q7Ky8cF6CP[/URL]"
+    },
+    {
+        "id": 9158,
+        "title": "UnkownCommand | German Version",
+        "tag": "Author: VenuxPvP",
+        "current_version": "2015-07-08",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": null,
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 77063,
+            "username": "VenuxPvP"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 181,
+            "updates": 0,
+            "reviews": {
+                "unique": 4,
+                "total": 4
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1436370570,
+        "last_update": 1436370570,
+        "description": "[B]Unkown Command?[/B]\nHey this is my New Plugin of German!\n\nHallo dies ist mein Neues Plugin auf Deutsch!\n\nDownload NOW!\n\nThis Plugin is German!"
+    },
+    {
+        "id": 95534,
+        "title": "Simple AntiCrash - (Anti Books, Armorstands) - ENGLISH",
+        "tag": "by b_py",
+        "current_version": "1.0",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": "",
+        "supported_minecraft_versions": [
+            "1.8"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/95/95534.jpg?1629553301",
+        "author": {
+            "id": 1383711,
+            "username": "b_py"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 156,
+            "updates": 0,
+            "reviews": {
+                "unique": 4,
+                "total": 4
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1629553268,
+        "last_update": 1629553268,
+        "description": "[CENTER][B][SIZE=7]Simple AntiCrash\nv: 1.0\n\n+ OPEN SOURCE!\n[/SIZE][/B]\n[SIZE=5]The Perfect Plugin for every Server!\n\n[U]If The Player interacts with the Item, the Item will get removed.[/U]\n\n[B][I]! The Best Plugin for every Creative Server ![/I][/B][/SIZE]\n\n\n[SIZE=5][B]What does [/B][/SIZE][B][SIZE=5]it Block?[/SIZE][/B]\n[SIZE=5]It blocks following things:\n\n- Book and Quill / Books\n- ArmorStands[/SIZE]\n\n+ Messages and Sounds Ingame!\n\n\n[B]Messages & Sounds when u Interact with Books or  Armorstands![/B]\n\n[ATTACH=full]646034[/ATTACH]\n[SIZE=5]\n[I]If u have Trouble with the Plugin, feel free to contact me on Discord[/I][B]: sxbi™#0001[/B]\n[/SIZE][/CENTER]"
+    },
+    {
+        "id": 26135,
+        "title": "Cosmic Creeper Eggs",
+        "tag": "Custom creeper eggs like cosmic pvp [Skript]",
+        "current_version": "1.0",
+        "category": {
+            "id": 4,
+            "title": "Spigot",
+            "description": "Plugins which work on a standard Spigot install."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.7",
+            "1.8",
+            "1.9",
+            "1.10"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/26/26135.jpg?1468162835",
+        "author": {
+            "id": 141340,
+            "username": "LandonEZ"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 689,
+            "updates": 0,
+            "reviews": {
+                "unique": 6,
+                "total": 6
+            },
+            "rating": "1.5"
+        },
+        "external_download_url": "",
+        "first_release": 1468162829,
+        "last_update": 1468162829,
+        "description": "[ATTACH=full]150761[/ATTACH][B][I][SIZE=6][COLOR=#ff0000]Custom Creeper Eggs is a plugin I made to be like Cosmic PvP's cegg plugin.[/COLOR][/SIZE][/I][/B]\n\n[B][U]Types:[/U][/B]\n[I]Drill Creeper Egg (1)\nGigantic Creeper Egg (2)\nSponge Creeper Egg (3)\nDuper Creeper Egg (4)\nMore To Come...[/I]\n\n[ATTACH=full]150760[/ATTACH]\n[B][U]/cegg (player) (Type)[/U][/B]\n[I]Type can be 1,2,3,4 or the names.[/I]\n\n[ATTACH=full]150758[/ATTACH]\n[B]admin.admin - Permission to /cegg[/B]\n\n[ATTACH=full]150759[/ATTACH]\n[ATTACH=full]150768[/ATTACH]\n[ATTACH=full]150769[/ATTACH]\n[ATTACH=full]150770[/ATTACH]\n[ATTACH=full]150771[/ATTACH]\n\n\nNEEDED:\nSkript\nSkQuery\n\nINSTALL:\nInstall Skript\nPlace the download Into the scripts under Skript folder\nRestart server"
+    }
+]

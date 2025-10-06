@@ -1,0 +1,385 @@
+[
+    {
+        "id": 28424,
+        "title": "AntiDDoS",
+        "tag": "Is very efficient for BungeeCord / Spigot servers. He block the DDoS.",
+        "current_version": "1.0",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.8"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 257444,
+            "username": "sk83race1"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 6656,
+            "updates": 0,
+            "reviews": {
+                "unique": 16,
+                "total": 16
+            },
+            "rating": "1.3"
+        },
+        "external_download_url": "",
+        "first_release": 1472203054,
+        "last_update": 1472203054,
+        "description": "[SIZE=5]This plugin blocks massive DDoS connections from the same IP . If it connects more than 5 people / bots on the same IP connection,  IP will be blocked to join on server.[/SIZE]"
+    },
+    {
+        "id": 36467,
+        "title": "Lobby-System OPEN BETA  SKRIPT + FREUNDE SYSTEM & PARTY SYSTEM",
+        "tag": "1.8 Lobby-System",
+        "current_version": "1.8",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": "",
+        "supported_minecraft_versions": [
+            "1.8"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 222136,
+            "username": "SentoxPvP"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 810,
+            "updates": 0,
+            "reviews": {
+                "unique": 8,
+                "total": 8
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1487351280,
+        "last_update": 1487351280,
+        "description": "[B]Was is alles schon trinnen?\nWenn man joint bekommt man diese Items!\n[/B]\n[COLOR=#ff0000]Navigator[/COLOR]\n[B][COLOR=#ffa64d]Spieler Verstecker[/COLOR][/B]\n[COLOR=#ff4d4d]SilentHub\nAutomatischer Nickname\nSchutzSchild\nLobby Selector\nFreunde-System\nParty-System\n\n[/COLOR]"
+    },
+    {
+        "id": 50389,
+        "title": "BIG LobbySystem",
+        "tag": "Lobbysystem mit Vieles Feutures",
+        "current_version": "2.2",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.7",
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11",
+            "1.12"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/50/50389.jpg?1512517399",
+        "author": {
+            "id": 482226,
+            "username": "BungeeCloud"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 1270,
+            "updates": 2,
+            "reviews": {
+                "unique": 9,
+                "total": 9
+            },
+            "rating": "1.4"
+        },
+        "external_download_url": "",
+        "first_release": 1512517384,
+        "last_update": 1513809177,
+        "description": "[CENTER]Großes LobbySystem/Plugin Würde mich über eine Bewertung Freuen und was mal beim Lobbysytem verbessern könnte\n\n[ATTACH=full]300824[/ATTACH]\n[SIZE=7]Das Plugin in euren Plugins Ordner ziehen\nServer starten\nMysql in der Config.yml Eintragen\nReloaden \nund Stauen ;)\n\n[ATTACH=full]300825[/ATTACH] \n\nGadges (Boots, Banner, Köpfe, Effecte)\nTägliche Belohnung (CoinsAPI)\nEffekte bei den Warps\nAlles Einstellbar in der Config\nSilentLobby\n/build Command\nChatSystem/RankSystem\nJump and Run System\nJump Pads\nKöpfe Editierbar\nAsync Programmiert (Weniger Reccourcen belastend)\nNeues Spieler Verstecken Designe\nMySql DatenBank\nSpieler verstecken\n Silent Lobby\n Lobbywechsler\nMSG\n Eigene Gruppen\n Double Jump\n Automatischer Spawnteleport\n Tablist\n Unbekannter Befehl Nachricht\n Man kann Kommands blocken\n JoinItems\n Wartungsarbeiten mode\n\n[ATTACH=full]300833[/ATTACH] \nLobbyGames\nGadges erweitern\n\n//Vorschläge?\nVorstell Video Könnt ihr per Nachricht Schicken!\n[/SIZE]\n\n\n\n\n[SIZE=7][ATTACH=full]300826[/ATTACH] [ATTACH=full]300827[/ATTACH] [/SIZE]\n\n[SIZE=7][ATTACH=full]300828[/ATTACH] [/SIZE]\n\n[SIZE=7][ATTACH=full]300829[/ATTACH] \n\n[ATTACH=full]300830[/ATTACH] \n\n[ATTACH=full]300831[/ATTACH] \n\n[ATTACH=full]300832[/ATTACH] \n\n\n[COLOR=#ff0000]DAS PLUGIN DARF NICHT ALS SEINS AUSGEGEBEN WERDEN\n\nDAS PLUGIN DARF NICHT DECOMPILT WERDEN[/COLOR]\n[/SIZE]\n[/CENTER]"
+    },
+    {
+        "id": 42926,
+        "title": "LobbySystem",
+        "tag": "Dis ist ein LobbySystem von mir programmiert",
+        "current_version": "v2",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.8"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 413938,
+            "username": "SnixDev"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 1683,
+            "updates": 0,
+            "reviews": {
+                "unique": 5,
+                "total": 5
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1498566623,
+        "last_update": 1498566623,
+        "description": "Features:\n- Profil\n- Einstellungen\n- Navigator\n- Sielerverstecken\n- FreundeSystem\n\n\n\nCommands:\n\n/ts - Permission: keine\n/web - Permission: keine\n\n\n/shop - Permission: keine\n\n\n/spawn - Permission: keine\n/warp - Permission: keine\n\n/build - Permission: lobby.build\n/fly - Permission: lobby.fly\n\n\n/gm \u003C0-3\u003E [Spieler] - Permission: lobby.gamemode\n/setspawn - Permission: lobby.setspawn\n/setwarp \u003CWarp\u003E - Permission: lobby.setwarp\n/time \u003CDay / Night\u003E - Permission: lobby.time\n/tp [Spieler] \u003CZielspieler\u003E - Permission: lobby.tp\n/weather \u003CSun / Rain\u003E - Permission: lobby.weather\n/setwarp \u003CWarp\u003E - Permission: lobby.setwarp\n/secret - Permission: lobby.setsecrets\n\nMit der Permission \"server.colorchat\" können Spieler farbig schreiben!\nMit der Permission \"lobby.vip\" werden Spieler im Player-Hider als VIP erkannt!\n\nJumpPads:\nGolddruckplatte\n\nItem-Permissions:\n\nPremium: lobby.premium\nMini-YouTuber: lobby.miniyoutuber\nYouTuber: lobby.youtuber\n\nRangSystem:\n\nRechte:\n\nAdmin: lobby.admin\nDev: lobby.developer\nSrMod: lobby.srmoderator\nMod: lobby.moderator\nSupporter: lobby.supporter\nBuilder: lobby.builder\nYouTuber: lobby.youtuber\nMiniYouTuber: lobby.miniyoutuber\n\nPremium-Ränge:\n\nUltimate: lobby.ultimate\nElite: lobby.elite\nPlus: lobby.plus"
+    },
+    {
+        "id": 12463,
+        "title": "TeamList",
+        "tag": "Wer ist online von den Teammitglieder? hmm ich mache mal /team!",
+        "current_version": "2.0",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": null,
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 88587,
+            "username": "iTz_Apple_LP"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 348,
+            "updates": 1,
+            "reviews": {
+                "unique": 4,
+                "total": 4
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1442778728,
+        "last_update": 1445535442,
+        "description": "[CENTER][B][SIZE=7]TeamList\n[/SIZE][/B][/CENTER]\n[B][SIZE=7]Der Source Code: [U][URL]http://pastebin.com/SV1K9aPu[/URL][/U][/SIZE]\n\n[SIZE=6]Dieses Plugin zeigt deine Teammitglieder an! [/SIZE]\n\n[SIZE=6]Dieses Plugin ist noch in der [U]Beta![/U]\n[U]Voraussetungen:[/U]\n[U]DU BRAUCHST ECLIPSE! Um da den source code rein zu machen und die Teammitglieder einzutragen! [/U]\n[/SIZE]\nFeatures:[/B]\n[LIST]\n[*][B]Zeigt die Teammitglieder mit /team an[/B]\n[/LIST]\n[B]Installation:[/B]\n[LIST=1]\n[*][B]Zieh das Plugin in dein \"plugins\" Ordner[/B]\n[*][B]Konfiguriere deine Teammitlgied in [U][B][B]Eclipse![/B][/B][/U][/B]\n[*][B]Starte/reload dein server(neu)[/B]\n[*][B]Enjoy :3[/B]\n[/LIST]\n[B]Befehle:[/B]\n[LIST]\n[*][B]/team (Keine Berechtigung nötig!)[/B]\n[/LIST]\n[B]\n[B]TODO:\n\n      \n[SIZE=6][B]    • Config.yml zum bearbeiten der Teammitglieder[/B][/SIZE]\n\n[/B][/B]"
+    },
+    {
+        "id": 33681,
+        "title": "Lobby-System",
+        "tag": "Lobby System",
+        "current_version": "1.8",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": "",
+        "supported_minecraft_versions": [
+            "1.8"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 222136,
+            "username": "SentoxPvP"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 1158,
+            "updates": 0,
+            "reviews": {
+                "unique": 4,
+                "total": 4
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1482670696,
+        "last_update": 1482670696,
+        "description": "Items:                                                  Hat noch weitere Systeme\n                                                        \nNavigator\nSpieler Verstecker\nAutomatischer Nickname\nSilentLobby\nSchutzSchild\nLobby Selector\nFreunde"
+    },
+    {
+        "id": 37242,
+        "title": "CustomCrates 1.0",
+        "tag": "CustomCrates",
+        "current_version": "1.0",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.7",
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/37/37242.jpg?1488531269",
+        "author": {
+            "id": 339247,
+            "username": "Jehuli12"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 525,
+            "updates": 0,
+            "reviews": {
+                "unique": 4,
+                "total": 4
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1488531258,
+        "last_update": 1488531258,
+        "description": "This is plugin for crates!\nCommands:\n/crate [For all commands]\n/crate reload [For reload the plugin]\n\n\n\n\n\nFor Problem Send Email To [email]ihackedyournetpvp@gmail.com[/email] or [email]chocogfx@abv.bg[/email]"
+    },
+    {
+        "id": 66080,
+        "title": "HealthTAB",
+        "tag": "show your health in tab!",
+        "current_version": "1.0",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": "legacy",
+        "supported_minecraft_versions": [
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11",
+            "1.12"
+        ],
+        "icon_link": "https://static.spigotmc.org/styles/spigot/xenresource/resource_icon.png",
+        "author": {
+            "id": 477203,
+            "username": "JeckTn-Gaming"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 131,
+            "updates": 0,
+            "reviews": {
+                "unique": 4,
+                "total": 4
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1553981841,
+        "last_update": 1553981841,
+        "description": "[B]PERMISSIONS[/B]\nUse /heathtab -\u003E healthtab.use\nHidden tab -\u003E healthtab.tab (edit config)\n[B]NO IMG[/B] :|"
+    },
+    {
+        "id": 29945,
+        "title": "Lobby System + Freunde + Party + Spielmodi",
+        "tag": "In diesem Plugin ist alles mit einem zusammen Lobby System , Freunde System, Party System etc.",
+        "current_version": "1.0",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.7",
+            "1.8",
+            "1.9"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/29/29945.jpg?1475320250",
+        "author": {
+            "id": 248744,
+            "username": "CRXSH"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 1909,
+            "updates": 0,
+            "reviews": {
+                "unique": 5,
+                "total": 5
+            },
+            "rating": "1.6"
+        },
+        "external_download_url": "",
+        "first_release": 1475320239,
+        "last_update": 1475320239,
+        "description": "[CENTER][B][COLOR=#660033][SIZE=7][FONT=Verdana]Lobby System\n[/FONT][/SIZE][/COLOR][/B][/CENTER]\n[B][COLOR=#660033][SIZE=7][FONT=Verdana]Features[/FONT][/SIZE][/COLOR][/B]\n[LIST]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Tablist[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Chat [/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Motd[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Nick (MySQL)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Lobby Switcher (Bungeecord)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Teleporter[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Spieler Verstecken/Anzeigen[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Gadgets[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]Silent Lobby[/FONT][/SIZE][/COLOR]\n[/LIST]\n[CENTER][/CENTER]\n[B][COLOR=#660033][SIZE=7][FONT=Verdana]Commands\n[/FONT][/SIZE][/COLOR][/B]\n[LIST]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/hub[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/leave[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/l[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/lobby[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/rank [Rang-Id] [/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/cc (gleart den Chat)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/pcc (gleart den eigenen Chat)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/event (startet ein Event)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/gm (Globalmute)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/build (Build-Modus)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/ban (Spieler bannen)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/mute (Spieler muten)[/FONT][/SIZE][/COLOR]\n[/LIST]\n[LIST]\n[*][COLOR=#660033][SIZE=7][FONT=Verdana]/spectate (Spectaten in Spielmodie)[/FONT][/SIZE][/COLOR]\n[/LIST]\n[CENTER][B][COLOR=#ff8000][SIZE=7][FONT=Verdana]Freunde System\n[/FONT][/SIZE][/COLOR][/B][/CENTER]\n[B][COLOR=#ff8000][SIZE=7][FONT=Verdana][B]Commands[/B][/FONT][/SIZE][/COLOR][/B]\n[LIST]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend add [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend deny [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend list[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend remove [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/msg [Name] (Text)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/r (Text)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend clear[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend requests[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff8000][SIZE=7][FONT=Verdana]/friend toggle[/FONT][/SIZE][/COLOR]\n[/LIST]\n\n[CENTER][B][COLOR=#00ff00][SIZE=7][FONT=Verdana]Party System[/FONT][/SIZE][/COLOR][/B][/CENTER]\n[B][COLOR=#00ff00][SIZE=7][FONT=Verdana]\n[B]Features[/B][/FONT][/SIZE][/COLOR][/B]\n[LIST]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/party invite [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/party accept [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/party deny [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/party list [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/party leave [/FONT][/SIZE][/COLOR]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/party kick [Name][/FONT][/SIZE][/COLOR]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/party toggle[/FONT][/SIZE][/COLOR]\n[*][COLOR=#00ff00][SIZE=7][FONT=Verdana]/p (Text)[/FONT][/SIZE][/COLOR]\n[/LIST]\n[CENTER][B][COLOR=#0000ff][SIZE=7][FONT=Verdana]Spielmodi\n[/FONT][/SIZE][/COLOR][/B][/CENTER]\n[LIST]\n[*][COLOR=#0000ff][SIZE=7][FONT=Verdana]BedWars[/FONT][/SIZE][/COLOR]\n[*][COLOR=#0000ff][SIZE=7][FONT=Verdana]SkyWars[/FONT][/SIZE][/COLOR]\n[*][COLOR=#0000ff][SIZE=7][FONT=Verdana]Super Jump[/FONT][/SIZE][/COLOR]\n[*][COLOR=#0000ff][SIZE=7][FONT=Verdana]EnderGames[/FONT][/SIZE][/COLOR]\n[*][COLOR=#0000ff][SIZE=7][FONT=Verdana]FFA[/FONT][/SIZE][/COLOR]\n[*][COLOR=#0000ff][SIZE=7][FONT=Verdana]SurvivalGames (auch qsg)[/FONT][/SIZE][/COLOR]\n[*][COLOR=#0000ff][SIZE=7][FONT=Verdana]BauEvent[/FONT][/SIZE][/COLOR]\n[/LIST]\n[CENTER][B][COLOR=#ff0000][SIZE=7][FONT=Verdana]Coming Soon\n[/FONT][/SIZE][/COLOR][/B][/CENTER]\n[LIST]\n[*][COLOR=#ff0000][SIZE=7][FONT=Verdana]Community System[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff0000][SIZE=7][FONT=Verdana]Mehr Nicknames[/FONT][/SIZE][/COLOR]\n[*][COLOR=#ff0000][SIZE=7][FONT=Verdana]Boots[/FONT][/SIZE][/COLOR]\n[/LIST]"
+    },
+    {
+        "id": 36892,
+        "title": "DE » KnockBackFFA",
+        "tag": "KITS × STATS × SCOREBOARD × FREE",
+        "current_version": "1.0",
+        "category": {
+            "id": 2,
+            "title": "Bungee - Spigot",
+            "description": "Spigot plugins that interact with BungeeCord."
+        },
+        "native_minecraft_version": null,
+        "supported_minecraft_versions": [
+            "1.8"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/36/36892.jpg?1487970035",
+        "author": {
+            "id": 215212,
+            "username": "XoneLP"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 1052,
+            "updates": 0,
+            "reviews": {
+                "unique": 3,
+                "total": 3
+            },
+            "rating": "1"
+        },
+        "external_download_url": "",
+        "first_release": 1487969874,
+        "last_update": 1487969874,
+        "description": "[COLOR=#000000]-------------------------------------------------------------------------------\n[IMG]https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA34N-EuMDKJrCOjb5hqhB4xCCwADOY1S8aZabm8bv7EfgHqTP[/IMG]\n-------------------------------------------------------------------------------\n» [/COLOR][COLOR=rgb(179, 0, 0)][U]Commands[/U][/COLOR]\n[COLOR=#000000]\n[B]/setgrenze[/B] × Setzt die Todes-Zone\n[B]/setgrenze2[/B] × Setzt die AntiPvP-Zone\n[B]/stats [/B]× Zeigt dein Statistiken an\n[B]/setlobby[/B] × Setzt den Spawnpunkt\n\n» [/COLOR][COLOR=rgb(179, 0, 0)][U]Permissions[/U][/COLOR]\n[COLOR=#000000]\nKeine [B]Rechte[/B] / [B]Perms[/B] verfügbar!\n\n» [/COLOR][COLOR=rgb(179, 0, 0)][U]Features[/U][/COLOR]\n[COLOR=#000000]\nDu brauchst[B] kein[/B] WorldGuard\nEs gibt [B]7[/B] tolle [B]Kits[/B]!\nVorteile mit[B] Kills[/B] holen!\nTodesnachrichten [B]an[/B]/[B]aus[/B]\n[B]Niemand[/B] kann abbauen [auch[B] keine[/B] OP's]\n\n» [/COLOR][COLOR=rgb(179, 0, 0)][U]Wichtig[/U][/COLOR]\n[COLOR=#000000]\nDieses Plugin darf[B] nicht[/B] Verkauft oder\nweiter[B] verschickt[/B] werden! [[B]Copyright[/B]]\n\n» [/COLOR][COLOR=rgb(179, 0, 0)][U]Updates[/U][/COLOR]\n[COLOR=#000000]\nEs wird zu diesem Plugin [B]keine[/B]\nUpdates mehr geben, da es [B]komplett[/B]\nreleased ist. Es können [B]keine[/B] Bugs,\nfehler oder [B]sonstiges [/B]auftreten.\n\n» [/COLOR][COLOR=rgb(179, 0, 0)][U]Sonstiges[/U][/COLOR]\n[COLOR=#000000]\nDieses Plugin läuft nur über\nSpigot[B] 1,8.0[/B], [B]1.8.3[/B] und [B]1.8.8[/B]\n\n» [/COLOR][COLOR=#b30000][U]Karte zum Download[/U][/COLOR]\n\n[B][URL='http://workupload.com/file/cqn9Ydz'][COLOR=#000000]DOWNLOAD[/COLOR][/URL][/B]\n\n» [COLOR=#b30000][U]Urheberrechtschutz[/U][/COLOR]\n\n[SIZE=4][URL='https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjx9tGdzqnSAhXHyRoKHTqNBXcQFggiMAE&url=http%3A%2F%2Fwww.compukick.de%2Fallgemein%2Fcopyright-zeichen&usg=AFQjCNGbziKA9QnnoOUDIaGA5KJskLA6AQ&sig2=veRxUG9Okva3ApkKsYhohg'][COLOR=#000000]©[/COLOR][/URL] Copyright [/SIZE][B][COLOR=#404040]XoneLP[/COLOR][/B] 2017\n\n» [COLOR=#b30000][U]Screenshots[/U][/COLOR]\n\nBald verfügbar!"
+    }
+]

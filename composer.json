@@ -1,0 +1,43 @@
+{
+    "name": "aternos/spigot-api",
+    "description": "PHP Client for the SpigotMC XenforoResourceManagerAPI. This client is based on the openapi spec.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "spigot",
+        "spigotmc",
+        "plugins",
+        "minecraft",
+        "php",
+        "api"
+    ],
+    "authors": [
+        {
+            "name": "Aternos GmbH",
+            "homepage": "https://aternos.gmbh"
+        }
+    ],
+    "homepage": "https://github.com/aternosorg/php-spigot-api",
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.5",
+        "phpunit/phpunit": "^12.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aternos\\SpigotApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aternos\\SpigotApi\\Tests\\": "tests/"
+        }
+    }
+}

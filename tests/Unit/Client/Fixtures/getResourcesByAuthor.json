@@ -1,0 +1,200 @@
+[
+    {
+        "id": 49016,
+        "title": "VaultChatFormatter",
+        "tag": "A very simple and tiny chat formatting plugin using Vault",
+        "current_version": "1.1",
+        "category": {
+            "id": 14,
+            "title": "Chat",
+            "description": ""
+        },
+        "native_minecraft_version": "",
+        "supported_minecraft_versions": [
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11",
+            "1.12",
+            "1.13",
+            "1.14",
+            "1.15",
+            "1.16",
+            "1.17",
+            "1.18"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/49/49016.jpg?1607976730",
+        "author": {
+            "id": 100356,
+            "username": "Luck"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 69799,
+            "updates": 0,
+            "reviews": {
+                "unique": 27,
+                "total": 27
+            },
+            "rating": "4.6"
+        },
+        "external_download_url": "",
+        "first_release": 1509403756,
+        "last_update": 1509403756,
+        "description": "A [I]very[/I] [I]simple[/I] and [I]tiny[/I] chat formatting plugin using Vault.\n\n[B]What's the point?[/B]\n\nThis plugin formats the chat, using one template format, and has placeholders for a players prefix/suffix which can be used in the template. Nothing more, nothing less.\n\nIf you want anything more than this, then I've suggested some alternatives you can try below.\n\n[B]Why bother creating something so basic when there are obviously better plugins out there?\n[/B]\nSome people just want something simple - EssentialsChat has always been my go-to, but some people don't want the whole of Essentials on their server.\n\n[B]How do I use it?\n[/B]\nAdd it to your plugins folder, restart your server, and the config file will be generated automatically in /plugins/VaultChatFormatter.\n\n[B]Why does it depend on Vault?\n[/B]\nVault is an API (a utility) which allows plugins (like this one) to pull permissions and chat data from a variety of sources without depending on and hooking with each individual source.\n\nYou can download Vault from its official download pages below:\n[LIST]\n[*][URL='https://www.spigotmc.org/resources/vault.34315/']Spigot[/URL]\n[*][URL='https://dev.bukkit.org/projects/vault']BukkitDev[/URL]\n[/LIST]\nIn order to set prefixes (and use this plugin), you also need a permissions plugin which implements the Vault Chat API. I've listed some popular choices below - but most permissions plugins are supported.\n[LIST]\n[*][URL='https://www.spigotmc.org/resources/28140/']LuckPerms[/URL] (written by me)\n[*][URL='https://dev.bukkit.org/projects/permissionsex']PermissionsEx[/URL]\n[*][URL='https://www.spigotmc.org/resources/11736/']zPermissions[/URL]\n[*][URL='https://dev.bukkit.org/projects/bpermissions']bPermissions[/URL]\n[/LIST]\n\n[B]This plugin doesn't do enough, I want more.[/B]\nOk, try these:\n[LIST]\n[*][URL='https://github.com/drtshock/Essentials']EssentialsX + EssentialsXChat[/URL] ( [URL='https://ci.akpmakes.tech/job/EssentialsX/']download[/URL] )\n[*][URL='https://dev.bukkit.org/projects/chatex']ChatEx[/URL]\n[*][URL='https://www.spigotmc.org/resources/deluxechat.1277/']DeluxeChat[/URL]\n[*][URL='https://www.spigotmc.org/resources/deluxechat.1277/']ChatControl[/URL]\n[*][URL='https://www.spigotmc.org/resources/bungee-chat.12592/']BungeeChat[/URL]\n[/LIST]\n[B]Can I see the source code?[/B]\n[URL='https://github.com/lucko/VaultChatFormatter/blob/master/src/main/java/me/lucko/chatformatter/ChatFormatterPlugin.java']Yes[/URL].\n[B]\nIs this plugin affiliated with or endorsed by the Vault project?[/B]\nNo - it's not. It is named VaultChatFormatter because it uses Vault to retrieve prefix & suffix data.\n[B]\nCan you add x feature?[/B]\nNo."
+    },
+    {
+        "id": 57242,
+        "title": "spark",
+        "tag": "spark is a performance profiler for Minecraft clients, servers and proxies.",
+        "current_version": "1.10.119",
+        "category": {
+            "id": 15,
+            "title": "Tools and Utilities",
+            "description": ""
+        },
+        "native_minecraft_version": "",
+        "supported_minecraft_versions": [
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11",
+            "1.12",
+            "1.13",
+            "1.14",
+            "1.15",
+            "1.16",
+            "1.17",
+            "1.18",
+            "1.19",
+            "1.20",
+            "1.20.5",
+            "1.21"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/57/57242.jpg?1645211170",
+        "author": {
+            "id": 100356,
+            "username": "Luck"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 245482,
+            "updates": 21,
+            "reviews": {
+                "unique": 91,
+                "total": 103
+            },
+            "rating": "4.8"
+        },
+        "external_download_url": "",
+        "first_release": 1527527040,
+        "last_update": 1733070687,
+        "description": "[CENTER][B][SIZE=7][IMG]https://i.imgur.com/ykHn9vx.png[/IMG]   [/SIZE][/B]\n[SIZE=4][B]spark is a performance profiler for Minecraft clients, servers and proxies.[/B][/SIZE]\n[/CENTER]\n[B]Useful Links[/B]\n[LIST]\n[*][B][URL='https://spark.lucko.me/']Website[/URL][/B] - browse the project homepage\n[*][B][URL='https://spark.lucko.me/docs']Documentation[/URL][/B] - read documentation and usage guides\n[*][B][URL='https://spark.lucko.me/download']Downloads[/URL][/B] - latest development builds\n[/LIST]\n[B][SIZE=5]What does it do?[/SIZE][/B]\nspark is made up of a number of components, each detailed separately below.\n[LIST]\n[*][B]CPU Profiler[/B]: Diagnose performance issues.\n[*][B]Memory Inspection[/B]: Diagnose memory issues.\n[*][B]Server Health Reporting[/B]: Keep track of overall server health.\n[/LIST]\n\n[B][SIZE=6]⚡ CPU Profiler[/SIZE][/B]\nspark's profiler can be used to diagnose performance issues: \"lag\", low tick rate, high CPU usage, etc.\n\nIt is:\n[LIST]\n[*][B]Lightweight[/B] - can be ran in production with minimal impact.\n[*][B]Easy to use[/B] - no configuration or setup necessary, just install the plugin/mod.\n[*][B]Quick to produce results[/B] - running for just ~30 seconds is enough to produce useful insights into problematic areas for performance.\n[*][B]Customisable[/B] - can be tuned to target specific threads, sample at a specific interval, record only \"laggy\" periods, etc\n[*][B]Highly readable[/B] - simple tree structure lends itself to easy analysis and interpretation. The viewer can also apply deobfuscation mappings.\n[/LIST]\nIt works by sampling statistical data about the systems activity, and constructing a call graph based on this data. The call graph is then displayed in an online viewer for further analysis by the user.\n\nThere are two different profiler engines:\n[LIST]\n[*]Native [ICODE]AsyncGetCallTrace[/ICODE] + [ICODE]perf_events[/ICODE] - uses [URL='https://github.com/jvm-profiling-tools/async-profiler']async-profiler[/URL] ([I]only available on Linux x86_64 systems[/I])\n[*]Built-in Java [ICODE]ThreadMXBean[/ICODE] - an improved version of the popular [URL='https://github.com/sk89q/WarmRoast']WarmRoast profiler[/URL] by sk89q.\n[/LIST]\n[B]\n[SIZE=6]⚡ Memory Inspection[/SIZE][/B]\nspark includes a number of tools which are useful for diagnosing memory issues with a server.\n[LIST]\n[*][B]Heap Summary[/B] - take & analyse a basic snapshot of the servers memory\n[LIST]\n[*]A simple view of the JVM's heap, see memory usage and instance counts for each class\n[*]Not intended to be a full replacement of proper memory analysis tools. (see below)\n[/LIST]\n[/LIST]\n[LIST]\n[*][B]Heap Dump[/B] - take a full (HPROF) snapshot of the servers memory\n[LIST]\n[*]Dumps (& optionally compresses) a full snapshot of JVM's heap.\n[*]This snapshot can then be inspected using conventional analysis tools.\n[/LIST]\n[/LIST]\n[LIST]\n[*][B]GC Monitoring[/B] - monitor garbage collection activity on the server\n[LIST]\n[*]Allows the user to relate GC activity to game server hangs, and easily see how long they are taking & how much memory is being free'd.\n[*]Observe frequency/duration of young/old generation garbage collections to inform which GC tuning flags to use\n[/LIST]\n[/LIST]\n[B][SIZE=6]⚡ Server Health Reporting[/SIZE][/B]\nspark can report a number of metrics summarising the servers overall health.\n\nThese metrics include:\n[LIST]\n[*][B]TPS[/B] - ticks per second, to a more accurate degree indicated by the /tps command\n[*][B]Tick Durations[/B] - how long each tick is taking (min, max and average)\n[*][B]CPU Usage[/B] - how much of the CPU is being used by the server process, and by the overall system\n[*][B]Memory Usage[/B] - how much memory is being used by the process\n[*][B]Disk Usage[/B] - how much disk space is free/being used by the system\n[/LIST]\nAs well as providing tick rate averages, spark can also monitor individual ticks - sending a report whenever a single tick's duration exceeds a certain threshold. This can be used to identify trends and the nature of performance issues, relative to other system or game events.\n\n\n[SIZE=5][B]Us[SIZE=5]a[/SIZE]ge[/B][/SIZE]\nTo install, just add the [B]spark.jar[/B] file to your servers plugins directory.\n\nInformation about [URL='https://spark.lucko.me/docs/Command-Usage']how to use commands[/URL] can be found in the docs.\n\nIf you’d like help analysing a profiling report, or just want to chat, feel free to join us on [URL='https://discord.gg/PAGT2fu']Discord[/URL].\n\n\n[B][SIZE=5]Guides[/SIZE][/B]\nThere are a few small \"guides\" available in the docs, covering the following topics.\n[LIST]\n[*][URL='https://spark.lucko.me/docs/guides/The-tick-loop']The tick loop[/URL]\n[*][URL='https://spark.lucko.me/docs/guides/Finding-lag-spikes']Finding the cause of lag spikes[/URL]\n[/LIST]"
+    },
+    {
+        "id": 28140,
+        "title": "LuckPerms",
+        "tag": "A permissions plugin for Minecraft servers (Bukkit/Spigot, BungeeCord & more)",
+        "current_version": "5.5.0",
+        "category": {
+            "id": 21,
+            "title": "Universal",
+            "description": "Plugins which operate both on BungeeCord and Spigot."
+        },
+        "native_minecraft_version": "",
+        "supported_minecraft_versions": [
+            "1.7",
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11",
+            "1.12",
+            "1.13",
+            "1.14",
+            "1.15",
+            "1.16",
+            "1.17",
+            "1.18",
+            "1.19",
+            "1.20",
+            "1.20.5",
+            "1.21"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/28/28140.jpg?1490821714",
+        "author": {
+            "id": 100356,
+            "username": "Luck"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 7722526,
+            "updates": 50,
+            "reviews": {
+                "unique": 969,
+                "total": 1082
+            },
+            "rating": "4.7"
+        },
+        "external_download_url": "",
+        "first_release": 1471723601,
+        "last_update": 1748251261,
+        "description": "[RIGHT][URL='https://luckperms.net/download']Looking for the BungeeCord download? Click here![/URL][/RIGHT]\n[CENTER][IMG]https://raw.githubusercontent.com/LuckPerms/branding/master/banner/banner.png[/IMG][/CENTER]\n[IMG]https://i.imgur.com/7vjPbyM.png[/IMG]\nLuckPerms is a permissions plugin for Minecraft servers (Bukkit/Spigot, BungeeCord & more). It allows server admins to control what features players can use by creating groups and assigning permissions.\n\nIt is:\n[LIST]\n[*][B]fast[/B] - written with performance and scalability in mind.\n[*][B]reliable[/B] - trusted by thousands of server admins, and the largest of server networks.\n[*][B]easy to use[/B] - setup permissions using commands, directly in config files, or using the web editor.\n[*][B]flexible[/B] - supports a variety of data storage options, and works on lots of different server types.\n[*][B]extensive[/B] - a plethora of customization options and settings which can be changed to suit your server.\n[*][B]free[/B] - available for download and usage at no cost, and permissively licensed so it can remain free forever.\n[/LIST]\nFor more information, see the wiki article on [URL='https://luckperms.net/wiki/Why-LuckPerms']Why LuckPerms?[/URL]\n\n[IMG]https://i.imgur.com/E5SUQSP.png[/IMG]\nThe latest downloads & other useful links can be found on the project homepage at [URL='https://luckperms.net/']luckperms.net[/URL].\n\nThe plugin has extensive [URL='https://luckperms.net/wiki']documentation available on the wiki[/URL]. Please use the resources there before coming to us directly for support.\n\nSupport for the plugin is provided on [URL='https://discord.gg/luckperms']Discord[/URL]. If you have a question which cannot be answered by reading the wiki, the best place to ask it is there.\n\nIf you would like to report a bug, please [URL='https://github.com/lucko/LuckPerms/issues']open a ticket on GitHub[/URL].\n\n[IMG]https://i.imgur.com/3kfqrp1.png[/IMG]\n[URL='https://bisecthosting.com/luck'][IMG]https://i.imgur.com/fpcKnbV.png[/IMG][/URL]\n[CENTER]LuckPerms is proudly sponsored by [URL='https://bisecthosting.com/luck']BisectHosting[/URL].[/CENTER]\n\nThey've kindly offered LuckPerms users a massive [B]25% off[/B] the first month of any of their game server hosting plans. To get the discount, just enter the promo code [B]luck[/B] at checkout!\n\n[IMG]https://i.imgur.com/zflMO8M.png[/IMG]\nMost of the other available permission plugins date back a number of years, and were created in the early Bukkit era. Almost without exception, they've been abandoned by their original authors, and receive no updates, support or bug fixes.\n\nLuckPerms is still a growing and active resource, and I endeavour to reply to all bug reports, issues and feature requests in a timely manner.\n\nLuckPerms supports fully automatic migration and data transfer from existing permissions plugins.\nFor more information about this process, please [URL='https://luckperms.net/wiki/Migration']read the wiki page[/URL].\n\n[IMG]https://i.imgur.com/CzC56lP.png[/IMG]\nPlease don't post bug reports/suggestions in the review section. Bugs should be reported by [URL='https://github.com/lucko/LuckPerms/issues']opening a ticket on GitHub[/URL].\n\nIf you just have a question, the best place to ask is in our Discord server. Either myself or somebody else will hopefully be able to assist.\n\nThis plugin took me while to make, so if you find it useful, a nice review would be appreciated. :) On the other hand, if you have suggestions, I'd love to hear those too!\n\n[B]If you're having issues using the plugin, please contact me BEFORE making a review. I *cannot* give support in the review section.[/B]"
+    },
+    {
+        "id": 79601,
+        "title": "BungeeGuard",
+        "tag": "A simple plugin which adds a security token to the BungeeCord handshaking protocol.",
+        "current_version": "1.4.0",
+        "category": {
+            "id": 21,
+            "title": "Universal",
+            "description": "Plugins which operate both on BungeeCord and Spigot."
+        },
+        "native_minecraft_version": "",
+        "supported_minecraft_versions": [
+            "1.8",
+            "1.9",
+            "1.10",
+            "1.11",
+            "1.12",
+            "1.13",
+            "1.14",
+            "1.15",
+            "1.16",
+            "1.17",
+            "1.18",
+            "1.19"
+        ],
+        "icon_link": "https://www.spigotmc.org/data/resource_icons/79/79601.jpg?1607976340",
+        "author": {
+            "id": 100356,
+            "username": "Luck"
+        },
+        "premium": {
+            "price": "0.00",
+            "currency": ""
+        },
+        "stats": {
+            "downloads": 78572,
+            "updates": 7,
+            "reviews": {
+                "unique": 77,
+                "total": 77
+            },
+            "rating": "4.2"
+        },
+        "external_download_url": "",
+        "first_release": 1591126009,
+        "last_update": 1748865755,
+        "description": "[CENTER][SIZE=7][B]BungeeGuard[/B][/SIZE][/CENTER]\n\nBungeeGuard is a plugin-based security/firewall solution for [URL='https://www.spigotmc.org/wiki/bungeecord/']BungeeCord[/URL] (and [URL='https://velocitypowered.com/']Velocity[/URL]) proxies.\n\n[SIZE=5][B]The problem[/B][/SIZE]\nBungeeCord installations are [B]insecure by default[/B], and require additional firewall rules to be configured (using iptables or otherwise) to prevent malicious users from bypassing the proxy and connecting using any uuid/username they choose.\n\nThis is a [B]well-known issue[/B], and over the years many (even large) servers have been successfully targeted using this attack.\n\n[SIZE=5][B]The conventional solution[/B][/SIZE]\nThe conventional solution recommended by the BungeeCord author is to configure a firewall rule using iptables or ufw to prevent outside connections to the backend servers.\n\nHowever, there are two main problems with this:\n[LIST=1]\n[*]Configuring these firewall rules is complicated, especially for inexperienced users.\n[LIST=1]\n[*]Even experienced users sometimes make mistakes or overlook things. Unless the setup is absolutely perfect, rules are prone to being broken during later changes, or reset on system reboot.\n[/LIST]\n[*]Users on \"shared hosting\" do not have access to the underlying system and most likely cannot setup their own firewall rules.\n[/LIST]\n[SIZE=5][B]The BungeeGuard solution[/B][/SIZE]\nServer admins install BungeeGuard (just an ordinary plugin!) on their proxies and backend servers.\n[LIST]\n[*]On the [B]proxy[/B], BungeeGuard adds a secret \"authentication token\" to the login handshake.\n[*]On the [B]backend[/B] (Spigot etc. server), BungeeGuard checks login handshakes to ensure they contain an allowed authentication token.\n[/LIST]\nIt's really that simple.\n\n[B][SIZE=5]Installation[/SIZE][/B]\nInstallation is very straightforward.\n\nIf you have access to the underlying system and are able to setup firewall rules using iptables (or otherwise), I strongly recommend you do so. Then, install BungeeGuard as well.\n\nSee [URL='https://github.com/lucko/BungeeGuard/blob/master/INSTALLATION.md']here[/URL] for a detailed install guide.\n\n[SIZE=5][B]License[/B][/SIZE]\nBungeeGuard is licensed and made available under the permissive MIT license. Please see [URL='https://github.com/lucko/BungeeGuard/blob/master/LICENSE.txt']here[/URL] for more information."
+    }
+]
