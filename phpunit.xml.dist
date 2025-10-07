@@ -18,7 +18,7 @@
     </testsuites>
     <source>
         <include>
-            <directory>src</directory>
+            <directory>src/Client</directory>
         </include>
     </source>
     <php>
