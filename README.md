@@ -6,6 +6,10 @@ It builds upon the [XenforoResourceManagerAPI](https://github.com/SpigotMC/Xenfo
 The generated code can be found in `src/Api` and `src/Model`.
 It is recommended to use the wrappers in `src/Client` instead of the generated code.
 
+## Requirements
+- PHP 8.2 or newer  
+- PHP extensions: curl, json, mbstring  
+
 ## Installation
 Install the package via composer:
 ```bash
