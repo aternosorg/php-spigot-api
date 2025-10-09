@@ -232,7 +232,7 @@ $project = $version->getProject();
 ```
 
 ## Updating the generated code
-Update the generated code by installing the (openapi generator)[https://openapi-generator.tech/docs/installation] and running:
+Update the generated code by installing the [openapi generator](https://openapi-generator.tech/docs/installation) and running:
 ```bash
 openapi-generator-cli generate -c config.yaml
 ```
