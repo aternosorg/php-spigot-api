@@ -19,7 +19,7 @@
     ],
     "homepage": "https://github.com/aternosorg/php-spigot-api",
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
