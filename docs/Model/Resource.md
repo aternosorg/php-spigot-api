@@ -19,5 +19,7 @@ Name | Type | Description | Notes
 **last_update** | **int** | last update as timestamp (in seconds) | [optional]
 **external_download_url** | **string** |  | [optional] [default to '']
 **description** | **string** |  | [optional]
+**source_code_url** | **string** |  | [optional] [default to '']
+**donate_url** | **string** |  | [optional] [default to '']
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
