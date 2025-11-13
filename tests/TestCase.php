@@ -23,7 +23,7 @@ class TestCase extends PHPUnitTestCase
     public function setUp(): void
     {
         $this->apiClient = new SpigotAPIClient();
-        $this->apiClient->setUserAgent("aternos/php-spigot-api@1.0.0 (contact@aternos.org)");
+        $this->apiClient->setUserAgent("aternos/php-spigot-api@2.0.0 (contact@aternos.org)");
     }
 
     protected function assertValidStats(ResourceStats $stats): void
