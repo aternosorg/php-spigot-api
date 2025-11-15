@@ -3,7 +3,8 @@
         "id": 227294,
         "resource_id": 57242,
         "resource_version": "1.0.0",
-        "download_count": 449,
+        "download_count": 458,
+        "post_date": 1527527040,
         "title": "spark",
         "message": "[CENTER][B][SIZE=7][IMG]https://i.imgur.com/ykHn9vx.png[/IMG]   [/SIZE][/B]\n[SIZE=4][B]spark is a performance profiler for Minecraft clients, servers and proxies.[/B][/SIZE]\n[/CENTER]\n[B]Useful Links[/B]\n[LIST]\n[*][B][URL='https://spark.lucko.me/']Website[/URL][/B] - browse the project homepage\n[*][B][URL='https://spark.lucko.me/docs']Documentation[/URL][/B] - read documentation and usage guides\n[*][B][URL='https://spark.lucko.me/download']Downloads[/URL][/B] - latest development builds\n[/LIST]\n[B][SIZE=5]What does it do?[/SIZE][/B]\nspark is made up of a number of components, each detailed separately below.\n[LIST]\n[*][B]CPU Profiler[/B]: Diagnose performance issues.\n[*][B]Memory Inspection[/B]: Diagnose memory issues.\n[*][B]Server Health Reporting[/B]: Keep track of overall server health.\n[/LIST]\n\n[B][SIZE=6]⚡ CPU Profiler[/SIZE][/B]\nspark's profiler can be used to diagnose performance issues: \"lag\", low tick rate, high CPU usage, etc.\n\nIt is:\n[LIST]\n[*][B]Lightweight[/B] - can be ran in production with minimal impact.\n[*][B]Easy to use[/B] - no configuration or setup necessary, just install the plugin/mod.\n[*][B]Quick to produce results[/B] - running for just ~30 seconds is enough to produce useful insights into problematic areas for performance.\n[*][B]Customisable[/B] - can be tuned to target specific threads, sample at a specific interval, record only \"laggy\" periods, etc\n[*][B]Highly readable[/B] - simple tree structure lends itself to easy analysis and interpretation. The viewer can also apply deobfuscation mappings.\n[/LIST]\nIt works by sampling statistical data about the systems activity, and constructing a call graph based on this data. The call graph is then displayed in an online viewer for further analysis by the user.\n\nThere are two different profiler engines:\n[LIST]\n[*]Native [ICODE]AsyncGetCallTrace[/ICODE] + [ICODE]perf_events[/ICODE] - uses [URL='https://github.com/jvm-profiling-tools/async-profiler']async-profiler[/URL] ([I]only available on Linux x86_64 systems[/I])\n[*]Built-in Java [ICODE]ThreadMXBean[/ICODE] - an improved version of the popular [URL='https://github.com/sk89q/WarmRoast']WarmRoast profiler[/URL] by sk89q.\n[/LIST]\n[B]\n[SIZE=6]⚡ Memory Inspection[/SIZE][/B]\nspark includes a number of tools which are useful for diagnosing memory issues with a server.\n[LIST]\n[*][B]Heap Summary[/B] - take & analyse a basic snapshot of the servers memory\n[LIST]\n[*]A simple view of the JVM's heap, see memory usage and instance counts for each class\n[*]Not intended to be a full replacement of proper memory analysis tools. (see below)\n[/LIST]\n[/LIST]\n[LIST]\n[*][B]Heap Dump[/B] - take a full (HPROF) snapshot of the servers memory\n[LIST]\n[*]Dumps (& optionally compresses) a full snapshot of JVM's heap.\n[*]This snapshot can then be inspected using conventional analysis tools.\n[/LIST]\n[/LIST]\n[LIST]\n[*][B]GC Monitoring[/B] - monitor garbage collection activity on the server\n[LIST]\n[*]Allows the user to relate GC activity to game server hangs, and easily see how long they are taking & how much memory is being free'd.\n[*]Observe frequency/duration of young/old generation garbage collections to inform which GC tuning flags to use\n[/LIST]\n[/LIST]\n[B][SIZE=6]⚡ Server Health Reporting[/SIZE][/B]\nspark can report a number of metrics summarising the servers overall health.\n\nThese metrics include:\n[LIST]\n[*][B]TPS[/B] - ticks per second, to a more accurate degree indicated by the /tps command\n[*][B]Tick Durations[/B] - how long each tick is taking (min, max and average)\n[*][B]CPU Usage[/B] - how much of the CPU is being used by the server process, and by the overall system\n[*][B]Memory Usage[/B] - how much memory is being used by the process\n[*][B]Disk Usage[/B] - how much disk space is free/being used by the system\n[/LIST]\nAs well as providing tick rate averages, spark can also monitor individual ticks - sending a report whenever a single tick's duration exceeds a certain threshold. This can be used to identify trends and the nature of performance issues, relative to other system or game events.\n\n\n[SIZE=5][B]Us[SIZE=5]a[/SIZE]ge[/B][/SIZE]\nTo install, just add the [B]spark.jar[/B] file to your servers plugins directory.\n\nInformation about [URL='https://spark.lucko.me/docs/Command-Usage']how to use commands[/URL] can be found in the docs.\n\nIf you’d like help analysing a profiling report, or just want to chat, feel free to join us on [URL='https://discord.gg/PAGT2fu']Discord[/URL].\n\n\n[B][SIZE=5]Guides[/SIZE][/B]\nThere are a few small \"guides\" available in the docs, covering the following topics.\n[LIST]\n[*][URL='https://spark.lucko.me/docs/guides/The-tick-loop']The tick loop[/URL]\n[*][URL='https://spark.lucko.me/docs/guides/Finding-lag-spikes']Finding the cause of lag spikes[/URL]\n[/LIST]"
     },
@@ -11,7 +12,8 @@
         "id": 228443,
         "resource_id": 57242,
         "resource_version": "1.0.4",
-        "download_count": 503,
+        "download_count": 504,
+        "post_date": 1528228692,
         "title": "1.0.4",
         "message": "[LIST]\n[*]Added a /spark alias\n[*]Added a max stack depth limit to fix issues with rendering\n[*]Allow multiple threads to be specified in the same command. e.g. /profiler start --thread Thread1 --thread Thread2\n[*]Optimize the way data is collected and processed\n[*]Add an option to group all thread pool processes under the same node in the viewer. This is enabled by default, use --not-combined to disable it.\n[*]Add ‘/profiler monitoring’ command to monitor tick times, and ‘–only-ticks-over’ argument to filter profiling output to ticks lasting over a certain duration\n[*]Improved the way data is serialized\n[*]Changed the default sampling interval from 10 to 4ms\n[/LIST]"
     },
@@ -19,7 +21,8 @@
         "id": 248755,
         "resource_id": 57242,
         "resource_version": "1.1.0",
-        "download_count": 543,
+        "download_count": 544,
+        "post_date": 1539960930,
         "title": "1.1.0",
         "message": "[LIST]\n[*]Improved sampler efficiency\n[*]Implement GC notifications as part of the monitoring command\n[*]Add /spark heap for basic heap dump (memory) analysis\n[*]Implement tab completion for commands\n[/LIST]"
     },
@@ -27,7 +30,8 @@
         "id": 258900,
         "resource_id": 57242,
         "resource_version": "1.2.0",
-        "download_count": 657,
+        "download_count": 658,
+        "post_date": 1546371285,
         "title": "1.2.0",
         "message": "[LIST]\n[*]Add a command (/spark heapdump) for generating hprof memory snapshots\n[*]Allow thread names to be specified using regex\n[*]Use fragment identifier instead of query parameters for web viewer (fixes issue with Multicraft consoles)\n[*]Add --without-gc flag to disable GC notifications during monitoring\n[*]Add --include-line-numbers flag to record the line number of method calls during sampling\n[*]Improve the type descriptor conversion in heap dump outputs\n[*]Update okhttp library version\n[*]Count ticks using a normal Java int instead of a LongAdder\n[*]Improve ThreadGrouper \"by pool\" regex expression\n[/LIST]"
     },
@@ -36,6 +40,7 @@
         "resource_id": 57242,
         "resource_version": "1.3.0",
         "download_count": 1646,
+        "post_date": 1557863721,
         "title": "1.3.0",
         "message": "[LIST]\n[*]Add a /spark tps command, for more accurate monitoring of the servers tick rate\n[*]Add /spark healthreport command, to view general information about the servers status\n[*]Add \"activity log\" feature for keeping track of past samples/memory dumps\n[*]Add support for generating heap dumps on non-hotspot JVMs (OpenJ9)\n[*]Add \"combine-all\" thread grouping argument\n[*]Allow sampling at fractions of a millisecond intervals\n[*]Improve the performance/efficiency of the sampler\n[*]Ensure that the plugin cleans up completely when disabled\n[/LIST]"
     },
@@ -44,6 +49,7 @@
         "resource_id": 57242,
         "resource_version": "1.3.1",
         "download_count": 1177,
+        "post_date": 1574727313,
         "title": "1.3.1",
         "message": "[LIST]\n[*]Make heap dump parsing more resilient to bad formatting\n[*]Send tick monitoring messages async\n[*]Add support for heap dump compression\n[*]Use protobuf to encode data sent to the web viewer instead of JSON\n[*]Add option to ignore \"sleeping\" threads when profling\n[*]Implement pagination in /spark activity\n[*]Fix various issues with --regex flag matching\n[*]Add support for PlaceholderAPI and MVdWPlaceholderAPI\n[*]Make CPU monitoring thread a daemon thread\n[/LIST]"
     },
@@ -51,7 +57,8 @@
         "id": 317029,
         "resource_id": 57242,
         "resource_version": "1.3.2",
-        "download_count": 1511,
+        "download_count": 1512,
+        "post_date": 1580999191,
         "title": "1.3.2",
         "message": "[LIST]\n[*]Added --order-by-time option to sampler\n[*]Implement alternative means of tick counting for Paper servers\n[*]Monitor average tick durations (where possible) and report in /spark tps and /tps\n[*]Other misc improvements & cleanup\n[/LIST]"
     },
@@ -59,7 +66,8 @@
         "id": 325832,
         "resource_id": 57242,
         "resource_version": "1.4.0",
-        "download_count": 573,
+        "download_count": 574,
+        "post_date": 1585824634,
         "title": "1.4.0",
         "message": "Hello - some updates for you.\n\n[B]A number of improvements to the profiler viewer[/B]\n[LIST]\n[*]Theme changes, should be much easier to read now!\n[*]Added right-click to \"bookmark\" a method call in the stack\n[*]Added title to show who created, time of creation, etc information\n[*]Improved the deobfuscation remapping algorithm\n[*]Uploaded profiles will now expire after 1 month instead of 1 week (pending - I'll change the config on this later today)\n[/LIST]\n\n[B]Include method descriptions in the data sent to the viewer to enable better application of deobfuscation mappings.[/B]\n[LIST]\n[*]With this change, the spark viewer is able to provide deobfuscation mappings for pretty much all unmapped methods!\n[/LIST]\n\n[B]Treat different methods (not just methods with the same name) as different stack nodes[/B]\n[LIST]\n[*]This is mostly an artifact of the change above, but is still a noteworthy improvement.\n[/LIST]\n\n[B]Allow comments to be specified on profiler output[/B]\n[LIST]\n[*]This comment will show up at the top of the viewer.\n[*]Should make it easier to organise lots of profiler tabs!\n[*]i.e. /spark sampler --stop --comment my survival server lag\n[/LIST]\n\n\nThat's it for now. Enjoy!"
     },
@@ -67,7 +75,8 @@
         "id": 376038,
         "resource_id": 57242,
         "resource_version": "1.4.3",
-        "download_count": 4804,
+        "download_count": 4805,
+        "post_date": 1607975972,
         "title": "1.4.3",
         "message": "Hey everyone\n\nThe update includes the following changes to the spark plugin from the past few months:\n[LIST]\n[*]Allow exact tick duration to be used as threshold in tickmonitoring command\n[*]Add '/spark gc' and '/spark gcmonitor' commands to help track GC activity\n[*]Improve the --ignore-sleeping flag, add --ignore-native flag\n[*]Add 95th percentile MSPT and replace avg MSPT with median\n[*]Include platform info in sampler and heap summary data\n[/LIST]\n\nMore significantly, you will notice that in the last 24hrs the web viewer has received a big upgrade. It's now significantly more responsive and loads in a fraction of the time it took previously. Many thanks to [USER=2180]@Tux[/USER] for their help implementing these improvements.\n\nEnjoy :)"
     },
@@ -75,7 +84,8 @@
         "id": 392307,
         "resource_id": 57242,
         "resource_version": "1.5.0",
-        "download_count": 575,
+        "download_count": 577,
+        "post_date": 1615652662,
         "title": "1.5.0",
         "message": "Hello everyone, update time!\n\nIf you like spark, please consider leaving a review or giving it a [URL='https://github.com/lucko/spark']star on GitHub[/URL]!\n\nOn with the changes...\n\n[B]Added support for async-profiler[/B]\n[LIST]\n[*][URL='https://github.com/jvm-profiling-tools/async-profiler']async-profiler[/URL] has been integrated into spark as a new profiler engine.\n[*]It is currently supported for Linux x86_64 servers only, the existing Java (WarmRoast) profiler will continue to be maintained for other systems and modes (like --only-ticks-over).\n[*]It's much more accurate and has a lower profiling overhead than the existing engine - win win!\n[/LIST]\n\n[B]Added permissions for sub-commands instead of just requiring 'spark'[/B]\n[LIST]\n[*]Sorry it took so long.. I of all people should know better!\n[/LIST]\n\n[B]Website/viewer changes and improvements[/B]\n[LIST]\n[*]Deployed a [URL='https://spark.lucko.me/docs']new documentation site[/URL]\n[*]Lots of style changes/improvements, added a new(ish) logo\n[*]Deobfuscation mappings are now applied automatically\n[*]Re-added the search bar - finally!\n[*]Re-added highlight/bookmarks, these are now encoded in the URL so you can share specific points in a profile with others easily\n[/LIST]\n\n[B]Fixed some bugs[/B]\n[LIST]\n[*]The main one was \"fix a bug upon early server startup in which percentiles would throw an out of bounds exception\" - thanks to astei for that fix!\n[/LIST]\n\nThat's all I got for ya, until next time... :)"
     }

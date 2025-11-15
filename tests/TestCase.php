@@ -78,6 +78,8 @@ class TestCase extends PHPUnitTestCase
         $this->assertNotNull($project->getData()->getDescription());
         $this->assertNotNull($project->getData()->getFirstRelease());
         $this->assertNotNull($project->getData()->getLastUpdate());
+        $this->assertNotNull($project->getData()->getSourceCodeUrl());
+        $this->assertNotNull($project->getData()->getDonateUrl());
     }
 
     protected function assertValidVersion(Version $version): void
@@ -89,6 +91,7 @@ class TestCase extends PHPUnitTestCase
         $this->assertNotNull($version->getData()->getDownloadCount());
         $this->assertNotNull($version->getData()->getTitle());
         $this->assertNotNull($version->getData()->getMessage());
+        $this->assertNotNull($version->getData()->getPostDate());
     }
 
     protected function assertValidPaginatedList(PaginatedList $list): void

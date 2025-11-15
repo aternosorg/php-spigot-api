@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **resource_id** | **int** |  | [optional]
 **resource_version** | **string** |  | [optional]
 **download_count** | **int** |  | [optional]
+**post_date** | **int** | post date as timestamp (in seconds) | [optional]
 **title** | **string** |  | [optional]
 **message** | **string** |  | [optional]
 

@@ -72,7 +72,9 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
         'first_release' => 'int',
         'last_update' => 'int',
         'external_download_url' => 'string',
-        'description' => 'string'
+        'description' => 'string',
+        'source_code_url' => 'string',
+        'donate_url' => 'string'
     ];
 
     /**
@@ -95,7 +97,9 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
         'first_release' => null,
         'last_update' => null,
         'external_download_url' => 'uri',
-        'description' => null
+        'description' => null,
+        'source_code_url' => 'uri',
+        'donate_url' => 'uri'
     ];
 
     /**
@@ -118,7 +122,9 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
         'first_release' => false,
         'last_update' => false,
         'external_download_url' => false,
-        'description' => false
+        'description' => false,
+        'source_code_url' => false,
+        'donate_url' => false
     ];
 
     /**
@@ -221,7 +227,9 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
         'first_release' => 'first_release',
         'last_update' => 'last_update',
         'external_download_url' => 'external_download_url',
-        'description' => 'description'
+        'description' => 'description',
+        'source_code_url' => 'source_code_url',
+        'donate_url' => 'donate_url'
     ];
 
     /**
@@ -244,7 +252,9 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
         'first_release' => 'setFirstRelease',
         'last_update' => 'setLastUpdate',
         'external_download_url' => 'setExternalDownloadUrl',
-        'description' => 'setDescription'
+        'description' => 'setDescription',
+        'source_code_url' => 'setSourceCodeUrl',
+        'donate_url' => 'setDonateUrl'
     ];
 
     /**
@@ -267,7 +277,9 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
         'first_release' => 'getFirstRelease',
         'last_update' => 'getLastUpdate',
         'external_download_url' => 'getExternalDownloadUrl',
-        'description' => 'getDescription'
+        'description' => 'getDescription',
+        'source_code_url' => 'getSourceCodeUrl',
+        'donate_url' => 'getDonateUrl'
     ];
 
     /**
@@ -341,6 +353,8 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('last_update', $data ?? [], null);
         $this->setIfExists('external_download_url', $data ?? [], '');
         $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('source_code_url', $data ?? [], '');
+        $this->setIfExists('donate_url', $data ?? [], '');
     }
 
     /**
@@ -800,6 +814,60 @@ class Resource implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable description cannot be null');
         }
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets source_code_url
+     *
+     * @return string|null
+     */
+    public function getSourceCodeUrl(): ?string
+    {
+        return $this->container['source_code_url'];
+    }
+
+    /**
+     * Sets source_code_url
+     *
+     * @param string|null $source_code_url source_code_url
+     *
+     * @return $this
+     */
+    public function setSourceCodeUrl(?string $source_code_url): static
+    {
+        if (is_null($source_code_url)) {
+            throw new InvalidArgumentException('non-nullable source_code_url cannot be null');
+        }
+        $this->container['source_code_url'] = $source_code_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets donate_url
+     *
+     * @return string|null
+     */
+    public function getDonateUrl(): ?string
+    {
+        return $this->container['donate_url'];
+    }
+
+    /**
+     * Sets donate_url
+     *
+     * @param string|null $donate_url donate_url
+     *
+     * @return $this
+     */
+    public function setDonateUrl(?string $donate_url): static
+    {
+        if (is_null($donate_url)) {
+            throw new InvalidArgumentException('non-nullable donate_url cannot be null');
+        }
+        $this->container['donate_url'] = $donate_url;
 
         return $this;
     }
