@@ -62,6 +62,7 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'resource_id' => 'int',
         'resource_version' => 'string',
         'download_count' => 'int',
+        'post_date' => 'int',
         'title' => 'string',
         'message' => 'string'
     ];
@@ -76,6 +77,7 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'resource_id' => null,
         'resource_version' => null,
         'download_count' => null,
+        'post_date' => null,
         'title' => null,
         'message' => null
     ];
@@ -90,6 +92,7 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'resource_id' => false,
         'resource_version' => false,
         'download_count' => false,
+        'post_date' => false,
         'title' => false,
         'message' => false
     ];
@@ -184,6 +187,7 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'resource_id' => 'resource_id',
         'resource_version' => 'resource_version',
         'download_count' => 'download_count',
+        'post_date' => 'post_date',
         'title' => 'title',
         'message' => 'message'
     ];
@@ -198,6 +202,7 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'resource_id' => 'setResourceId',
         'resource_version' => 'setResourceVersion',
         'download_count' => 'setDownloadCount',
+        'post_date' => 'setPostDate',
         'title' => 'setTitle',
         'message' => 'setMessage'
     ];
@@ -212,6 +217,7 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'resource_id' => 'getResourceId',
         'resource_version' => 'getResourceVersion',
         'download_count' => 'getDownloadCount',
+        'post_date' => 'getPostDate',
         'title' => 'getTitle',
         'message' => 'getMessage'
     ];
@@ -276,6 +282,7 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('resource_id', $data ?? [], null);
         $this->setIfExists('resource_version', $data ?? [], null);
         $this->setIfExists('download_count', $data ?? [], null);
+        $this->setIfExists('post_date', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('message', $data ?? [], null);
     }
@@ -426,6 +433,33 @@ class ResourceUpdate implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable download_count cannot be null');
         }
         $this->container['download_count'] = $download_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets post_date
+     *
+     * @return int|null
+     */
+    public function getPostDate(): ?int
+    {
+        return $this->container['post_date'];
+    }
+
+    /**
+     * Sets post_date
+     *
+     * @param int|null $post_date post date as timestamp (in seconds)
+     *
+     * @return $this
+     */
+    public function setPostDate(?int $post_date): static
+    {
+        if (is_null($post_date)) {
+            throw new InvalidArgumentException('non-nullable post_date cannot be null');
+        }
+        $this->container['post_date'] = $post_date;
 
         return $this;
     }
