@@ -3,6 +3,7 @@
 namespace Aternos\SpigotApi\Tests\Integration\Client;
 
 use Aternos\SpigotApi\ApiException;
+use Aternos\SpigotApi\Client\Category;
 use Aternos\SpigotApi\Client\Project;
 use Aternos\SpigotApi\Tests\TestCase;
 
@@ -18,6 +19,17 @@ class ProjectTest extends TestCase
         parent::setUp();
         // Spark by Luck
         $this->project = $this->apiClient->getProject(57242);
+    }
+
+    public function testGetCategory(): void
+    {
+        $resourceCategory = $this->project->getData()->getCategory();
+        $this->assertEquals(15, $resourceCategory->getId());
+        $this->assertEquals("Tools and Utilities", $resourceCategory->getTitle());
+        $this->assertEquals("", $resourceCategory->getDescription());
+
+        $category = $this->project->getCategory();
+        $this->assertEquals(Category::SPIGOT_TOOLS_AND_UTILITIES, $category);
     }
 
     /**

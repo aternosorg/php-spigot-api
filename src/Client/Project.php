@@ -32,6 +32,16 @@ class Project
     }
 
     /**
+     * Get the category of the project.
+     *
+     * @return Category
+     */
+    public function getCategory(): Category
+    {
+        return Category::from($this->getData()->getCategory()->getId());
+    }
+
+    /**
      * Get the author of the project.
      *
      * @throws ApiException
