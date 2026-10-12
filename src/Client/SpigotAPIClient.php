@@ -68,14 +68,20 @@ class SpigotAPIClient
      * List projects
      *
      * @param int $page
+     * @param ProjectOrder|null $order Field to order the results by. When null, the API default (id) is used.
+     * @param SortDirection|null $direction Direction to order the results by. When null, the API default (asc) is used.
      * @return PaginatedProjectList
      * @throws ApiException
      */
-    public function listProjects(int $page = 1): PaginatedProjectList
+    public function listProjects(
+        int            $page = 1,
+        ?ProjectOrder  $order = null,
+        ?SortDirection $direction = null,
+    ): PaginatedProjectList
     {
-        $resources = $this->api->listResources(null, $page);
+        $resources = $this->api->listResources(null, $page, $order?->value, $direction?->value);
 
-        return new PaginatedProjectList($this, $page, $resources);
+        return new PaginatedProjectList($this, $page, $resources, $order, $direction);
     }
 
     /**
@@ -83,14 +89,21 @@ class SpigotAPIClient
      *
      * @param Category $category
      * @param int $page
+     * @param ProjectOrder|null $order Field to order the results by. When null, the API default (id) is used.
+     * @param SortDirection|null $direction Direction to order the results by. When null, the API default (asc) is used.
      * @return PaginatedCategoryProjectList
      * @throws ApiException
      */
-    public function listProjectsForCategory(Category $category, int $page = 1): PaginatedCategoryProjectList
+    public function listProjectsForCategory(
+        Category       $category,
+        int            $page = 1,
+        ?ProjectOrder  $order = null,
+        ?SortDirection $direction = null,
+    ): PaginatedCategoryProjectList
     {
-        $resources = $this->api->listResources($category->value, $page);
+        $resources = $this->api->listResources($category->value, $page, $order?->value, $direction?->value);
 
-        return new PaginatedCategoryProjectList($this, $category, $page, $resources);
+        return new PaginatedCategoryProjectList($this, $category, $page, $resources, $order, $direction);
     }
 
     /**
@@ -122,14 +135,21 @@ class SpigotAPIClient
      *
      * @param int $id The project ID
      * @param int $page
+     * @param VersionOrder|null $order Field to order the results by. When null, the API default (id) is used.
+     * @param SortDirection|null $direction Direction to order the results by. When null, the API default (asc) is used.
      * @return PaginatedVersionList
      * @throws ApiException
      */
-    public function getProjectVersions(int $id, int $page = 1): PaginatedVersionList
+    public function getProjectVersions(
+        int            $id,
+        int            $page = 1,
+        ?VersionOrder  $order = null,
+        ?SortDirection $direction = null,
+    ): PaginatedVersionList
     {
-        $resources = $this->api->getResourceUpdates($id, $page);
+        $resources = $this->api->getResourceUpdates($id, $page, $order?->value, $direction?->value);
 
-        return new PaginatedVersionList($this, $id, $page, $resources);
+        return new PaginatedVersionList($this, $id, $page, $resources, $order, $direction);
     }
 
     /**

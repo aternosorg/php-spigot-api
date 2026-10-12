@@ -4,6 +4,8 @@ namespace Aternos\SpigotApi\Client\List;
 
 use Aternos\SpigotApi\Client\Category;
 use Aternos\SpigotApi\Client\Project;
+use Aternos\SpigotApi\Client\ProjectOrder;
+use Aternos\SpigotApi\Client\SortDirection;
 use Aternos\SpigotApi\Client\SpigotAPIClient;
 use Aternos\SpigotApi\Model\Resource;
 
@@ -15,11 +17,22 @@ class PaginatedCategoryProjectList extends PaginatedList
 
     protected SpigotAPIClient $client;
     protected Category $category;
+    protected ?ProjectOrder $order;
+    protected ?SortDirection $direction;
 
-    public function __construct(SpigotAPIClient $client, Category $category, int $page, array $resources)
+    public function __construct(
+        SpigotAPIClient $client,
+        Category        $category,
+        int             $page,
+        array           $resources,
+        ?ProjectOrder   $order = null,
+        ?SortDirection  $direction = null,
+    )
     {
         $this->client = $client;
         $this->category = $category;
+        $this->order = $order;
+        $this->direction = $direction;
 
         $hits = count($resources);
         $projects = array_map(fn(Resource $resource) => new Project($this->client, $resource), $resources);
@@ -29,6 +42,6 @@ class PaginatedCategoryProjectList extends PaginatedList
 
     public function getPage(int $page): static
     {
-        return $this->client->listProjectsForCategory($this->category, $page);
+        return $this->client->listProjectsForCategory($this->category, $page, $this->order, $this->direction);
     }
 }
