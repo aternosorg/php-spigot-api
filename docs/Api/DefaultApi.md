@@ -233,7 +233,7 @@ No authorization required
 ## `getResourceUpdates()`
 
 ```php
-getResourceUpdates($id, $page): \Aternos\SpigotApi\Model\ResourceUpdate[]
+getResourceUpdates($id, $page, $order, $direction): \Aternos\SpigotApi\Model\ResourceUpdate[]
 ```
 
 Obtain all the updates to a resource
@@ -253,9 +253,11 @@ $apiInstance = new Aternos\SpigotApi\Api\DefaultApi(
 );
 $id = 56; // int | The resource ID
 $page = 56; // int | The page of results to get
+$order = 'order_example'; // string | Field to order the results by
+$direction = 'direction_example'; // string | Direction to order the results by
 
 try {
-    $result = $apiInstance->getResourceUpdates($id, $page);
+    $result = $apiInstance->getResourceUpdates($id, $page, $order, $direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getResourceUpdates: ', $e->getMessage(), PHP_EOL;
@@ -268,6 +270,8 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| The resource ID | |
 | **page** | **int**| The page of results to get | [optional] |
+| **order** | **string**| Field to order the results by | [optional] |
+| **direction** | **string**| Direction to order the results by | [optional] |
 
 ### Return type
 
@@ -396,7 +400,7 @@ No authorization required
 ## `listResources()`
 
 ```php
-listResources($category, $page): \Aternos\SpigotApi\Model\Resource[]
+listResources($category, $page, $order, $direction): \Aternos\SpigotApi\Model\Resource[]
 ```
 
 Obtain a list of all resources
@@ -416,9 +420,11 @@ $apiInstance = new Aternos\SpigotApi\Api\DefaultApi(
 );
 $category = 56; // int | The category ID from which to draw resources
 $page = 56; // int | The page of results to get
+$order = 'order_example'; // string | Field to order the results by
+$direction = 'direction_example'; // string | Direction to order the results by
 
 try {
-    $result = $apiInstance->listResources($category, $page);
+    $result = $apiInstance->listResources($category, $page, $order, $direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->listResources: ', $e->getMessage(), PHP_EOL;
@@ -431,6 +437,8 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **category** | **int**| The category ID from which to draw resources | [optional] |
 | **page** | **int**| The page of results to get | [optional] |
+| **order** | **string**| Field to order the results by | [optional] |
+| **direction** | **string**| Direction to order the results by | [optional] |
 
 ### Return type
 

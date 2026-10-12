@@ -1,4 +1,4 @@
-# # ResourceStats
+# ResourceStats
 
 ## Properties
 

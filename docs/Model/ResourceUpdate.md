@@ -1,4 +1,4 @@
-# # ResourceUpdate
+# ResourceUpdate
 
 ## Properties
 
