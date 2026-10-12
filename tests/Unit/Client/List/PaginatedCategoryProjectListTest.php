@@ -5,6 +5,8 @@ namespace Aternos\SpigotApi\Tests\Unit\Client\List;
 use Aternos\SpigotApi\Client\Category;
 use Aternos\SpigotApi\Client\List\PaginatedCategoryProjectList;
 use Aternos\SpigotApi\Client\Project;
+use Aternos\SpigotApi\Client\ProjectOrder;
+use Aternos\SpigotApi\Client\SortDirection;
 use Aternos\SpigotApi\Client\SpigotAPIClient;
 use Aternos\SpigotApi\Model\Resource;
 use Aternos\SpigotApi\Model\ResourceCategory;
@@ -132,5 +134,20 @@ class PaginatedCategoryProjectListTest extends TestCase
         $all = $page1->getResultsFromFollowingPages();
         $this->assertCount(3, $all); // 1 from page1 + 2 from page2
         $this->assertContainsOnlyInstancesOf(Project::class, $all);
+    }
+
+    public function testGetNextPageKeepsOrder(): void
+    {
+        $mockedApiClient = $this->createMock(SpigotAPIClient::class);
+
+        $page1 = new PaginatedCategoryProjectList($mockedApiClient, Category::SPIGOT, 1, [new Resource(['id' => 1])], ProjectOrder::FIRST_RELEASE, SortDirection::ASC);
+        $page2 = new PaginatedCategoryProjectList($mockedApiClient, Category::SPIGOT, 2, [new Resource(['id' => 2])], ProjectOrder::FIRST_RELEASE, SortDirection::ASC);
+
+        $mockedApiClient->expects($this->once())
+            ->method('listProjectsForCategory')
+            ->with(Category::SPIGOT, 2, ProjectOrder::FIRST_RELEASE, SortDirection::ASC)
+            ->willReturn($page2);
+
+        $this->assertSame($page2, $page1->getNextPage());
     }
 }

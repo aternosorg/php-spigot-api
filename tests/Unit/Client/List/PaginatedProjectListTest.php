@@ -4,6 +4,8 @@ namespace Aternos\SpigotApi\Tests\Unit\Client\List;
 
 use Aternos\SpigotApi\Client\List\PaginatedProjectList;
 use Aternos\SpigotApi\Client\Project;
+use Aternos\SpigotApi\Client\ProjectOrder;
+use Aternos\SpigotApi\Client\SortDirection;
 use Aternos\SpigotApi\Client\SpigotAPIClient;
 use Aternos\SpigotApi\Model\Resource;
 use Aternos\SpigotApi\Tests\TestCase;
@@ -112,5 +114,20 @@ class PaginatedProjectListTest extends TestCase
         $all = $page1->getResultsFromFollowingPages();
         $this->assertCount(3, $all); // 1 from page1 + 2 from page2
         $this->assertContainsOnlyInstancesOf(Project::class, $all);
+    }
+
+    public function testGetNextPageKeepsOrder(): void
+    {
+        $mockedApiClient = $this->createMock(SpigotAPIClient::class);
+
+        $page1 = new PaginatedProjectList($mockedApiClient, 1, [new Resource(['id' => 1])], ProjectOrder::DOWNLOAD_COUNT, SortDirection::DESC);
+        $page2 = new PaginatedProjectList($mockedApiClient, 2, [new Resource(['id' => 2])], ProjectOrder::DOWNLOAD_COUNT, SortDirection::DESC);
+
+        $mockedApiClient->expects($this->once())
+            ->method('listProjects')
+            ->with(2, ProjectOrder::DOWNLOAD_COUNT, SortDirection::DESC)
+            ->willReturn($page2);
+
+        $this->assertSame($page2, $page1->getNextPage());
     }
 }
