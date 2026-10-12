@@ -19,6 +19,14 @@ class PaginatedVersionList extends PaginatedList
     protected ?VersionOrder $order;
     protected ?SortDirection $direction;
 
+    /**
+     * @param SpigotAPIClient $client
+     * @param int $projectId
+     * @param int $page
+     * @param ResourceUpdate[] $updates
+     * @param VersionOrder|null $order
+     * @param SortDirection|null $direction
+     */
     public function __construct(
         SpigotAPIClient $client,
         int             $projectId,

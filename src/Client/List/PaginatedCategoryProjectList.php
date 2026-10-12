@@ -20,6 +20,14 @@ class PaginatedCategoryProjectList extends PaginatedList
     protected ?ProjectOrder $order;
     protected ?SortDirection $direction;
 
+    /**
+     * @param SpigotAPIClient $client
+     * @param Category $category
+     * @param int $page
+     * @param Resource[] $resources
+     * @param ProjectOrder|null $order
+     * @param SortDirection|null $direction
+     */
     public function __construct(
         SpigotAPIClient $client,
         Category        $category,

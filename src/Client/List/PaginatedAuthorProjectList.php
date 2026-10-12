@@ -15,6 +15,12 @@ class PaginatedAuthorProjectList extends PaginatedList
     protected SpigotAPIClient $client;
     protected int $authorId;
 
+    /**
+     * @param SpigotAPIClient $client
+     * @param int $authorId
+     * @param int $page
+     * @param Resource[] $resources
+     */
     public function __construct(SpigotAPIClient $client, int $authorId, int $page, array $resources)
     {
         $this->client = $client;
