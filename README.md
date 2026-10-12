@@ -42,6 +42,8 @@ To list all projects (resources) on SpigotMC (paginated) for a given page, use `
 
 **Parameters**
 - `int $page = 1`. Optional. Default: 1. The page number to retrieve. Items are paginated at 10 results per page.
+- `?ProjectOrder $order = null`. Optional. Default: `null` (API default: `id`). The field to order the results by. From `Aternos\SpigotApi\Client\ProjectOrder` enum.
+- `?SortDirection $direction = null`. Optional. Default: `null` (API default: `asc`). The direction to order the results by. From `Aternos\SpigotApi\Client\SortDirection` enum.
 
 ```php
 $projects = $spigotClient->listProjects(1);
@@ -56,6 +58,10 @@ $projects = $projects->getNextPage();
 foreach ($projects as $project) {
     echo $project->getData()->getTitle() . PHP_EOL;
 }
+
+// list the most downloaded projects
+// the order is kept when navigating with getNextPage() / getPreviousPage()
+$projects = $spigotClient->listProjects(1, ProjectOrder::DOWNLOAD_COUNT, SortDirection::DESC);
 ```
 
 ### listProjectsForCategory()
@@ -66,6 +72,8 @@ To list all projects (resources) on SpigotMC (paginated) for a given category an
 **Parameters**
 - `Category $category`. Required. The category to filter by. From `Aternos\SpigotApi\Client\Category` enum.
 - `int $page = 1`. Optional. Default: 1. The page number to retrieve. Items are paginated at 10 results per page.
+- `?ProjectOrder $order = null`. Optional. Default: `null` (API default: `id`). The field to order the results by. From `Aternos\SpigotApi\Client\ProjectOrder` enum.
+- `?SortDirection $direction = null`. Optional. Default: `null` (API default: `asc`). The direction to order the results by. From `Aternos\SpigotApi\Client\SortDirection` enum.
 
 ```php
 $projects = $spigotClient->listProjectsForCategory(Category::SPIGOT, 1);
@@ -80,6 +88,9 @@ $projects = $projects->getNextPage();
 foreach ($projects as $project) {
     echo $project->getData()->getTitle() . PHP_EOL;
 }
+
+// list the most recently updated projects in a category
+$projects = $spigotClient->listProjectsForCategory(Category::SPIGOT, 1, ProjectOrder::LAST_UPDATE, SortDirection::DESC);
 ```
 ## Projects / Resources
 
@@ -110,6 +121,9 @@ $project = $spigotClient->getProject(2);
 
 // get versions as a PaginatedVersionList
 $versions = $project->getVersions();
+
+// get the newest versions first
+$versions = $project->getVersions(1, VersionOrder::POST_DATE, SortDirection::DESC);
 
 // get the author
 $author = $project->getAuthor();
@@ -195,12 +209,17 @@ To fetch paginated updates for a project, use `getProjectVersions()`.
 **Parameters**
 - `int $id`. Required. The numeric id of the project.
 - `int $page = 1`. Optional. Default: 1. The page number to retrieve. Items are paginated at 10 results per page.
+- `?VersionOrder $order = null`. Optional. Default: `null` (API default: `id`). The field to order the results by. From `Aternos\SpigotApi\Client\VersionOrder` enum.
+- `?SortDirection $direction = null`. Optional. Default: `null` (API default: `asc`). The direction to order the results by. From `Aternos\SpigotApi\Client\SortDirection` enum.
 
 ```php
 $versions = $spigotClient->getProjectVersions(2);
 foreach ($versions as $version) {
     echo $version->getData()->getTitle() . PHP_EOL;
 }
+
+// list the newest versions first
+$versions = $spigotClient->getProjectVersions(2, 1, VersionOrder::POST_DATE, SortDirection::DESC);
 ```
 
 ### getVersion()
