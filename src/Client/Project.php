@@ -54,10 +54,17 @@ class Project
     /**
      * Get a list of versions for this project.
      *
+     * @param int $page
+     * @param VersionOrder|null $order Field to order the results by. When null, the API default (id) is used.
+     * @param SortDirection|null $direction Direction to order the results by. When null, the API default (asc) is used.
      * @throws ApiException
      */
-    public function getVersions(): PaginatedVersionList
+    public function getVersions(
+        int            $page = 1,
+        ?VersionOrder  $order = null,
+        ?SortDirection $direction = null,
+    ): PaginatedVersionList
     {
-        return $this->client->getProjectVersions($this->getId());
+        return $this->client->getProjectVersions($this->getId(), $page, $order, $direction);
     }
 }

@@ -1,4 +1,4 @@
-# # AuthorIdentities
+# AuthorIdentities
 
 ## Properties
 

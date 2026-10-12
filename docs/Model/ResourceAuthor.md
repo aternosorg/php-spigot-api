@@ -1,4 +1,4 @@
-# # ResourceAuthor
+# ResourceAuthor
 
 ## Properties
 

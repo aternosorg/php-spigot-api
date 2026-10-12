@@ -4,8 +4,10 @@ namespace Aternos\SpigotApi\Tests\Unit\Client\List;
 
 use Aternos\SpigotApi\Client\List\PaginatedVersionList;
 use Aternos\SpigotApi\Client\Project;
+use Aternos\SpigotApi\Client\SortDirection;
 use Aternos\SpigotApi\Client\SpigotAPIClient;
 use Aternos\SpigotApi\Client\Version;
+use Aternos\SpigotApi\Client\VersionOrder;
 use Aternos\SpigotApi\Model\ResourceUpdate;
 use Aternos\SpigotApi\Tests\TestCase;
 
@@ -113,5 +115,20 @@ class PaginatedVersionListTest extends TestCase
         $all = $page1->getResultsFromFollowingPages();
         $this->assertCount(3, $all); // 1 from page1 + 2 from page2
         $this->assertContainsOnlyInstancesOf(Version::class, $all);
+    }
+
+    public function testGetNextPageKeepsOrder(): void
+    {
+        $mockedApiClient = $this->createMock(SpigotAPIClient::class);
+
+        $page1 = new PaginatedVersionList($mockedApiClient, 100, 1, [new ResourceUpdate(['id' => 1, 'resource_id' => 100])], VersionOrder::POST_DATE, SortDirection::DESC);
+        $page2 = new PaginatedVersionList($mockedApiClient, 100, 2, [new ResourceUpdate(['id' => 2, 'resource_id' => 100])], VersionOrder::POST_DATE, SortDirection::DESC);
+
+        $mockedApiClient->expects($this->once())
+            ->method('getProjectVersions')
+            ->with(100, 2, VersionOrder::POST_DATE, SortDirection::DESC)
+            ->willReturn($page2);
+
+        $this->assertSame($page2, $page1->getNextPage());
     }
 }

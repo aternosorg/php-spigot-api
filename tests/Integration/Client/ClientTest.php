@@ -9,12 +9,57 @@ use Aternos\SpigotApi\Client\List\PaginatedCategoryProjectList;
 use Aternos\SpigotApi\Client\List\PaginatedProjectList;
 use Aternos\SpigotApi\Client\List\PaginatedVersionList;
 use Aternos\SpigotApi\Client\Project;
+use Aternos\SpigotApi\Client\ProjectOrder;
+use Aternos\SpigotApi\Client\SortDirection;
 use Aternos\SpigotApi\Client\Version;
+use Aternos\SpigotApi\Client\VersionOrder;
 use Aternos\SpigotApi\Tests\TestCase;
 use PHPUnit\Framework\Attributes\TestWith;
 
 class ClientTest extends TestCase
 {
+    public function testListProjectsOrderedByDownloadCount(): void
+    {
+        $firstPage = $this->apiClient->listProjects(1, ProjectOrder::DOWNLOAD_COUNT, SortDirection::DESC);
+        $secondPage = $firstPage->getNextPage();
+
+        // collect the download counts of all projects from both pages
+        $downloadCounts = [];
+        foreach ($firstPage as $project) {
+            $downloadCounts[] = $project->getData()->getStats()->getDownloads();
+        }
+        foreach ($secondPage as $project) {
+            $downloadCounts[] = $project->getData()->getStats()->getDownloads();
+        }
+        $this->assertNotEmpty($downloadCounts);
+
+        // each project must have at least as many downloads as the next one
+        for ($i = 0; $i < count($downloadCounts) - 1; $i++) {
+            $this->assertGreaterThanOrEqual($downloadCounts[$i + 1], $downloadCounts[$i]);
+        }
+    }
+
+    public function testGetProjectVersionsOrderedByPostDate(): void
+    {
+        $firstPage = $this->apiClient->getProjectVersions(2, 1, VersionOrder::POST_DATE, SortDirection::DESC);
+        $secondPage = $firstPage->getNextPage();
+
+        // collect the post dates of all versions from both pages
+        $postDates = [];
+        foreach ($firstPage as $version) {
+            $postDates[] = $version->getData()->getPostDate();
+        }
+        foreach ($secondPage as $version) {
+            $postDates[] = $version->getData()->getPostDate();
+        }
+        $this->assertNotEmpty($postDates);
+
+        // each version must have been posted at the same time or after the next one
+        for ($i = 0; $i < count($postDates) - 1; $i++) {
+            $this->assertGreaterThanOrEqual($postDates[$i + 1], $postDates[$i]);
+        }
+    }
+
     public function testListProjects(): void
     {
         $paginatedProjectList = $this->apiClient->listProjects();

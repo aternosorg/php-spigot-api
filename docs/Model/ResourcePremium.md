@@ -1,4 +1,4 @@
-# # ResourcePremium
+# ResourcePremium
 
 ## Properties
 
