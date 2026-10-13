@@ -9,10 +9,17 @@ use Aternos\SpigotApi\Client\List\PaginatedCategoryProjectList;
 use Aternos\SpigotApi\Client\List\PaginatedProjectList;
 use Aternos\SpigotApi\Client\List\PaginatedVersionList;
 use Aternos\SpigotApi\Configuration;
+use Composer\InstalledVersions;
+use OutOfBoundsException;
 use Psr\Http\Client\ClientInterface;
 
 class SpigotAPIClient
 {
+    /**
+     * Name of this package on packagist, used to look up the installed version
+     */
+    public const string PACKAGE_NAME = "aternos/spigot-api";
+
     protected ?ClientInterface $httpClient;
     protected Configuration $configuration;
     protected DefaultApi $api;
@@ -21,8 +28,34 @@ class SpigotAPIClient
     {
         $this->httpClient = $httpClient;
 
-        $this->setConfiguration($configuration ?? (Configuration::getDefaultConfiguration())
-            ->setUserAgent("php-spigot-api/2.0.0"));
+        $this->setConfiguration($configuration ?? (new Configuration())
+            ->setUserAgent(static::getDefaultUserAgent()));
+    }
+
+    /**
+     * Get the installed version of this library, e.g. "2.4.0" or "dev-main"
+     * Returns "unknown" if the version cannot be determined, e.g. if the library was not installed using composer.
+     *
+     * @return string
+     */
+    public static function getLibraryVersion(): string
+    {
+        try {
+            return InstalledVersions::getPrettyVersion(static::PACKAGE_NAME) ?? "unknown";
+        } catch (OutOfBoundsException) {
+            return "unknown";
+        }
+    }
+
+    /**
+     * Get the user agent that identifies this library, e.g. "aternos/php-spigot-api/2.4.0"
+     * It is used unless a different user agent is set with {@see setUserAgent()}.
+     *
+     * @return string
+     */
+    public static function getDefaultUserAgent(): string
+    {
+        return "aternos/php-spigot-api/" . static::getLibraryVersion();
     }
 
     /**
@@ -40,9 +73,10 @@ class SpigotAPIClient
     }
 
     /**
-     * Set the user agent used for HTTP requests
+     * Set the user agent used for HTTP requests.
+     * This replaces the default user agent of this library, see {@see getDefaultUserAgent()}.
      *
-     * @param string $userAgent
+     * @param string $userAgent user agent identifying your application, ideally including contact information
      * @return $this
      */
     public function setUserAgent(string $userAgent): static

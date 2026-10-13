@@ -20,6 +20,7 @@
     "homepage": "https://github.com/aternosorg/php-spigot-api",
     "require": {
         "php": "^8.3",
+        "composer-runtime-api": "^2.0",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
