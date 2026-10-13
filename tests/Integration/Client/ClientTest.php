@@ -207,7 +207,23 @@ class ClientTest extends TestCase
     #[TestWith([Category::TRIAL_DATA_PACK], Category::TRIAL_DATA_PACK->name)]
     public function testListProjectsForCategory(Category $category): void
     {
+        // only the first page is requested for each category to keep the number of requests low,
+        // pagination is tested in testListProjectsForCategoryPagination
         $paginatedProjectList = $this->apiClient->listProjectsForCategory($category);
+        $this->assertInstanceOf(PaginatedCategoryProjectList::class, $paginatedProjectList);
+        $this->assertFalse($paginatedProjectList->hasPreviousPage());
+        $this->assertNotEmpty($paginatedProjectList->getResults());
+        $this->assertGreaterThan(1, $paginatedProjectList->getHits());
+
+        foreach ($paginatedProjectList as $project) {
+            $this->assertNotNull($project);
+            $this->assertInstanceOf(Project::class, $project);
+        }
+    }
+
+    public function testListProjectsForCategoryPagination(): void
+    {
+        $paginatedProjectList = $this->apiClient->listProjectsForCategory(Category::SPIGOT);
         $this->assertFalse($paginatedProjectList->hasPreviousPage());
 
         $firstProjectOfPages = [];
