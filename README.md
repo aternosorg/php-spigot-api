@@ -26,9 +26,14 @@ use Aternos\SpigotApi\Client\SpigotAPIClient;
 // create an API client (main entry point)
 $spigotClient = new SpigotAPIClient();
 
-// set a user agent (recommended)
-$spigotClient->setUserAgent('aternos/php-spigot-api-example');
+// set a user agent identifying your application (recommended)
+$spigotClient->setUserAgent("my-app/1.0.0 (contact@example.com)");
 ```
+
+### User Agent
+It is recommended to set a user agent that identifies your application, ideally including contact information.
+If you don't set a user agent, the client sends its own user agent including the installed version,
+e.g. `aternos/php-spigot-api/2.4.0`. A user agent set with `setUserAgent()` replaces it.
 
 ## Result Lists
 Most methods return a paginated result list containing the current page of results and navigation helpers.
