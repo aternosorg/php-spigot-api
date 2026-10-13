@@ -3,9 +3,11 @@
 namespace Aternos\SpigotApi\Tests\Unit\Client;
 
 use Aternos\SpigotApi\ApiException;
+use Aternos\SpigotApi\Client\Category;
 use Aternos\SpigotApi\Client\Project;
 use Aternos\SpigotApi\Model\Resource;
 use Aternos\SpigotApi\Model\ResourceAuthor;
+use Aternos\SpigotApi\Model\ResourceCategory;
 use Aternos\SpigotApi\Tests\TestCase;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
@@ -26,11 +28,11 @@ class ProjectTest extends TestCase
             'title' => 'spark',
             'tag' => 'spark is a performance profiler for Minecraft clients, servers and proxies.',
             'current_version' => '1.10.119',
-            'category' => [
+            'category' => new ResourceCategory([
                 'id' => 15,
                 'title' => 'Tools and Utilities',
                 'description' => ''
-            ],
+            ]),
             'native_minecraft_version' => '',
             'supported_minecraft_versions' => [
                 '1.8',
@@ -87,6 +89,13 @@ spark is made up of a number of components, each detailed separately below.
 [B][SIZE=6]⚡ CPU Profiler[/SIZE][/B]
 spark\'s profiler can be used to diagnose performance issues: "lag", low tick rate, high CPU usage, etc.'
         ]);
+    }
+
+    public function testGetCategory(): void
+    {
+        $project = new Project($this->apiClient, $this->getResourceModel());
+
+        $this->assertSame(Category::SPIGOT_TOOLS_AND_UTILITIES, $project->getCategory());
     }
 
     /**

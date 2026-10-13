@@ -24,6 +24,16 @@ class SpigotAPIClientTest extends TestCase
         $this->assertNotEquals("unknown", SpigotAPIClient::getLibraryVersion());
     }
 
+    public function testGetLibraryVersionReturnsUnknownForMissingPackage(): void
+    {
+        $client = new class extends SpigotAPIClient {
+            public const string PACKAGE_NAME = "aternos/this-package-does-not-exist";
+        };
+
+        $this->assertEquals("unknown", $client::getLibraryVersion());
+        $this->assertEquals("aternos/php-spigot-api/unknown", $client::getDefaultUserAgent());
+    }
+
     public function testDefaultUserAgentContainsPackageAndVersion(): void
     {
         $this->assertEquals(

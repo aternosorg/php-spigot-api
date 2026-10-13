@@ -60,6 +60,21 @@ class PaginatedProjectListTest extends TestCase
         $this->assertSame(1, $list->key());
     }
 
+    public function testOffsetSetAndUnset(): void
+    {
+        $list = new PaginatedProjectList($this->apiClient, 1, [new Resource(['id' => 1])]);
+        $project = new Project($this->apiClient, new Resource(['id' => 2]));
+
+        $list[1] = $project;
+        $this->assertCount(2, $list);
+        $this->assertSame($project, $list[1]);
+
+        unset($list[0]);
+        $this->assertCount(1, $list);
+        $this->assertFalse(isset($list[0]));
+        $this->assertSame($project, $list[1]);
+    }
+
     public function testGetNextPageUsesClient(): void
     {
         $mockedApiClient = $this->createMock(SpigotAPIClient::class);
