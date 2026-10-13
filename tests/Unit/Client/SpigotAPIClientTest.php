@@ -4,6 +4,7 @@ namespace Aternos\SpigotApi\Tests\Unit\Client;
 
 use Aternos\SpigotApi\ApiException;
 use Aternos\SpigotApi\Client\SpigotAPIClient;
+use Aternos\SpigotApi\Configuration;
 use Aternos\SpigotApi\Tests\TestCase;
 use Composer\InstalledVersions;
 use GuzzleHttp\Client;
@@ -56,6 +57,39 @@ class SpigotAPIClientTest extends TestCase
         $client->getProject(2);
 
         $this->assertEquals("test-agent/1.0", $history[0]['request']->getHeaderLine("User-Agent"));
+    }
+
+    /**
+     * Clients created without an explicit configuration must not share one,
+     * otherwise changing the user agent of one client would change it for all others.
+     */
+    public function testClientsWithoutExplicitConfigurationDoNotShareOne(): void
+    {
+        $defaultUserAgent = Configuration::getDefaultConfiguration()->getUserAgent();
+
+        $first = new SpigotAPIClient();
+        $second = new SpigotAPIClient();
+        $first->setUserAgent("first-agent/1.0");
+
+        $this->assertEquals("first-agent/1.0", $this->getConfiguration($first)->getUserAgent());
+        $this->assertEquals(SpigotAPIClient::getDefaultUserAgent(), $this->getConfiguration($second)->getUserAgent());
+        $this->assertEquals($defaultUserAgent, Configuration::getDefaultConfiguration()->getUserAgent());
+    }
+
+    public function testExplicitConfigurationIsUsed(): void
+    {
+        $configuration = new Configuration();
+        $client = new SpigotAPIClient($configuration);
+
+        $client->setUserAgent("custom-agent/1.0");
+
+        $this->assertSame($configuration, $this->getConfiguration($client));
+        $this->assertEquals("custom-agent/1.0", $configuration->getUserAgent());
+    }
+
+    protected function getConfiguration(SpigotAPIClient $client): Configuration
+    {
+        return (new \ReflectionProperty($client, "configuration"))->getValue($client);
     }
 
     /**

@@ -28,7 +28,7 @@ class SpigotAPIClient
     {
         $this->httpClient = $httpClient;
 
-        $this->setConfiguration($configuration ?? (Configuration::getDefaultConfiguration())
+        $this->setConfiguration($configuration ?? (new Configuration())
             ->setUserAgent(static::getDefaultUserAgent()));
     }
 
