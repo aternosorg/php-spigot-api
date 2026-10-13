@@ -35,10 +35,37 @@ It is recommended to set a user agent that identifies your application, ideally 
 If you don't set a user agent, the client sends its own user agent including the installed version,
 e.g. `aternos/php-spigot-api/2.4.0`. A user agent set with `setUserAgent()` replaces it.
 
+### Error Handling
+All methods that send a request throw an `Aternos\SpigotApi\ApiException` if the request fails.
+The exception code is the HTTP status code of the response.
+```php
+use Aternos\SpigotApi\ApiException;
+
+try {
+    $project = $spigotClient->getProject(2);
+} catch (ApiException $e) {
+    echo $e->getCode() . PHP_EOL;
+    var_dump($e->getResponseBody());
+}
+```
+
+### Custom HTTP Client or Configuration
+You can pass your own `Aternos\SpigotApi\Configuration` and [Guzzle](https://docs.guzzlephp.org/) client,
+e.g. to set timeouts or add middlewares:
+```php
+use Aternos\SpigotApi\Configuration;
+use GuzzleHttp\Client;
+
+$spigotClient = new SpigotAPIClient(new Configuration(), new Client(["timeout" => 10]));
+// or
+$spigotClient->setHttpClient(new Client(["timeout" => 10]));
+```
+
 ## Result Lists
 Most methods return a paginated result list containing the current page of results and navigation helpers.
 The result list implements `Iterator`, `ArrayAccess` and `Countable` so it can be used like an array. 
 It also has a `getResults()` method returning the underlying array.
+The API does not return the total number of results, so `getNextPage()` returns an empty list after the last page.
 
 ### listProjects()
 [XenforoResourceManagerAPI#listResources](https://github.com/SpigotMC/XenforoResourceManagerAPI?tab=readme-ov-file#listresources)
@@ -51,6 +78,9 @@ To list all projects (resources) on SpigotMC (paginated) for a given page, use `
 - `?SortDirection $direction = null`. Optional. Default: `null` (API default: `asc`). The direction to order the results by. From `Aternos\SpigotApi\Client\SortDirection` enum.
 
 ```php
+use Aternos\SpigotApi\Client\ProjectOrder;
+use Aternos\SpigotApi\Client\SortDirection;
+
 $projects = $spigotClient->listProjects(1);
 
 foreach ($projects as $project) {
@@ -81,6 +111,10 @@ To list all projects (resources) on SpigotMC (paginated) for a given category an
 - `?SortDirection $direction = null`. Optional. Default: `null` (API default: `asc`). The direction to order the results by. From `Aternos\SpigotApi\Client\SortDirection` enum.
 
 ```php
+use Aternos\SpigotApi\Client\Category;
+use Aternos\SpigotApi\Client\ProjectOrder;
+use Aternos\SpigotApi\Client\SortDirection;
+
 $projects = $spigotClient->listProjectsForCategory(Category::SPIGOT, 1);
 
 foreach ($projects as $project) {
@@ -121,6 +155,9 @@ $description = $project->getData()->getDescription();
 To request more information about a project from the API, use the methods on the `Project` wrapper.
 
 ```php
+use Aternos\SpigotApi\Client\SortDirection;
+use Aternos\SpigotApi\Client\VersionOrder;
+
 // get a specific project (by numeric id)
 $project = $spigotClient->getProject(2);
 
@@ -218,6 +255,9 @@ To fetch paginated updates for a project, use `getProjectVersions()`.
 - `?SortDirection $direction = null`. Optional. Default: `null` (API default: `asc`). The direction to order the results by. From `Aternos\SpigotApi\Client\SortDirection` enum.
 
 ```php
+use Aternos\SpigotApi\Client\SortDirection;
+use Aternos\SpigotApi\Client\VersionOrder;
+
 $versions = $spigotClient->getProjectVersions(2);
 foreach ($versions as $version) {
     echo $version->getData()->getTitle() . PHP_EOL;
