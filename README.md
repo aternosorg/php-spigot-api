@@ -261,6 +261,11 @@ Update the generated code by installing the [openapi generator](https://openapi-
 openapi-generator-cli generate -c config.yaml
 ```
 
+**The generated code has to be patched afterwards.** The endpoints of the Spigot API are defined as
+`/index.php?action=...`, so all other query parameters have to be appended with `&`, but the generator uses `?`.
+After generating, replace every `"?{$query}"` with `"&{$query}"` in `src/Api/DefaultApi.php`.
+The unit test `testQueryParametersAreAppendedToTheActionParameter` fails if this patch is missing.
+
 ## Tests
 This project provides two kinds of automated tests:
 
