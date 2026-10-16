@@ -123,7 +123,28 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
     /**
      * @throws ApiException
      */
-    public function testGetVersions(): void
+    public function testFetchVersions(): void
+    {
+        $handler = new MockHandler([
+            new Response(200, [], file_get_contents(__DIR__ . "/Fixtures/getResourceUpdates.json")),
+        ]);
+        $this->apiClient->setHttpClient(new Client(['handler' => HandlerStack::create($handler)]));
+        $project = new Project($this->apiClient, $this->getResourceModel());
+
+        $versions = $project->fetchVersions();
+        $this->assertNotNull($versions);
+        $this->assertNotEmpty($versions);
+
+        foreach ($versions as $version) {
+            $this->assertValidVersion($version);
+            $this->assertEquals($project->getId(), $version->getProjectId());
+        }
+    }
+
+    /**
+     * @throws ApiException
+     */
+    public function testDeprecatedGetVersionsFetchesVersions(): void
     {
         $handler = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . "/Fixtures/getResourceUpdates.json")),
@@ -132,13 +153,8 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
         $project = new Project($this->apiClient, $this->getResourceModel());
 
         $versions = $project->getVersions();
-        $this->assertNotNull($versions);
         $this->assertNotEmpty($versions);
-
-        foreach ($versions as $version) {
-            $this->assertValidVersion($version);
-            $this->assertEquals($project->getId(), $version->getProjectId());
-        }
+        $this->assertSame(0, $handler->count());
     }
 
 

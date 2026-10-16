@@ -279,7 +279,7 @@ class ClientTest extends TestCase
     {
         $project = $this->apiClient->getProject(2);
 
-        $versions = $project->getVersions();
+        $versions = $project->fetchVersions();
         $this->assertNotNull($versions);
         $this->assertNotEmpty($versions);
         foreach ($versions as $version) {

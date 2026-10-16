@@ -53,9 +53,9 @@ class ProjectTest extends TestCase
     /**
      * @throws ApiException
      */
-    public function testGetVersions(): void
+    public function testFetchVersions(): void
     {
-        $versions = $this->project->getVersions();
+        $versions = $this->project->fetchVersions();
         $this->assertNotNull($versions);
         $this->assertNotEmpty($versions);
 
