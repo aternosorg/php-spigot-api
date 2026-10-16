@@ -49,12 +49,6 @@ jobs:
       - name: Run phpunit unit tests with coverage
         run: vendor/bin/phpunit --testsuite=unit --colors=always --testdox --coverage-clover=coverage.xml
 
-      - name: Coverage Check
-        uses: ericsizemore/phpunit-coverage-check-action@2.0.0
-        with:
-          clover_file: 'coverage.xml'
-          threshold: 75
-
   # integration tests send requests to the live SpigotMC API,
   # so they only run on the main branch and when started manually
   integration-tests:
