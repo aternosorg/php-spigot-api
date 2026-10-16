@@ -161,11 +161,11 @@ use Aternos\SpigotApi\Client\VersionOrder;
 // get a specific project (by numeric id)
 $project = $spigotClient->getProject(2);
 
-// get versions as a PaginatedVersionList
-$versions = $project->getVersions();
+// fetch the versions from the API as a PaginatedVersionList (sends a request)
+$versions = $project->fetchVersions();
 
-// get the newest versions first
-$versions = $project->getVersions(1, VersionOrder::POST_DATE, SortDirection::DESC);
+// fetch the newest versions first
+$versions = $project->fetchVersions(1, VersionOrder::POST_DATE, SortDirection::DESC);
 
 // get the author
 $author = $project->getAuthor();
