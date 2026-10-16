@@ -10,8 +10,8 @@ use Aternos\SpigotApi\Client\List\PaginatedProjectList;
 use Aternos\SpigotApi\Client\List\PaginatedVersionList;
 use Aternos\SpigotApi\Configuration;
 use Composer\InstalledVersions;
+use GuzzleHttp\ClientInterface;
 use OutOfBoundsException;
-use Psr\Http\Client\ClientInterface;
 
 class SpigotAPIClient
 {
