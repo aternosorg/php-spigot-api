@@ -29,10 +29,10 @@ class VersionTest extends TestCase
     /**
      * @throws ApiException
      */
-    public function testGetProject(): void
+    public function testFetchProject(): void
     {
         $project = $this->apiClient->getProject(6245);
-        $this->assertEquals($project, $this->version->getProject());
+        $this->assertEquals($project, $this->version->fetchProject());
     }
 
 }
