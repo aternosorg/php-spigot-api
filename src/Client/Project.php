@@ -6,19 +6,24 @@ use Aternos\SpigotApi\ApiException;
 use Aternos\SpigotApi\Client\List\PaginatedVersionList;
 use Aternos\SpigotApi\Model\Resource;
 
-class Project
+class Project extends Resource
 {
 
     public function __construct(
         protected SpigotAPIClient $client,
-        protected Resource        $data
+        Resource                  $data
     )
     {
+        parent::__construct($data->container);
     }
 
+    /**
+     * @deprecated The project extends the generated model now, so its getters can be used directly.
+     * @return Resource
+     */
     public function getData(): Resource
     {
-        return $this->data;
+        return $this;
     }
 
     /**
@@ -28,7 +33,7 @@ class Project
      */
     public function getId(): int
     {
-        return intval($this->data->getId());
+        return intval(parent::getId());
     }
 
     /**
@@ -36,19 +41,20 @@ class Project
      *
      * @return Category
      */
-    public function getCategory(): Category
+    public function getCategoryType(): Category
     {
-        return Category::from($this->getData()->getCategory()->getId());
+        return Category::from($this->getCategory()->getId());
     }
 
     /**
-     * Get the author of the project.
+     * Fetch the author of the project from the API.
      *
+     * @return Author
      * @throws ApiException
      */
-    public function getAuthor(): Author
+    public function fetchAuthor(): Author
     {
-        return $this->client->getAuthor($this->data->getAuthor()->getId());
+        return $this->client->getAuthor($this->getAuthor()->getId());
     }
 
     /**

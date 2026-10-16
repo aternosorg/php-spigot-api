@@ -50,7 +50,7 @@ class ClientTest extends TestCase
 
         foreach ($projectList as $project) {
             $this->assertValidProject($project);
-            $this->assertEquals(Category::SPIGOT->value, $project->getData()->getCategory()->getId());
+            $this->assertEquals(Category::SPIGOT->value, $project->getCategory()->getId());
         }
     }
 
@@ -67,7 +67,7 @@ class ClientTest extends TestCase
         $project = $this->apiClient->getProject(2);
         $this->assertNotNull($project);
         $this->assertValidProject($project);
-        $this->assertEquals("spark", $project->getData()->getTitle());
+        $this->assertEquals("spark", $project->getTitle());
     }
 
     /**
@@ -83,9 +83,9 @@ class ClientTest extends TestCase
         $version = $this->apiClient->getVersion(352711);
         $this->assertNotNull($version);
         $this->assertValidVersion($version);
-        $this->assertEquals("spark", $version->getData()->getTitle());
-        $this->assertEquals(227294, $version->getData()->getId());
-        $this->assertEquals(57242, $version->getData()->getResourceId());
+        $this->assertEquals("spark", $version->getTitle());
+        $this->assertEquals(227294, $version->getId());
+        $this->assertEquals(57242, $version->getResourceId());
     }
 
     /**
@@ -116,8 +116,7 @@ class ClientTest extends TestCase
 
         $user = $this->apiClient->getAuthor(1);
         $this->assertNotNull($user);
-        $this->assertNotNull($user->getData());
-        $this->assertEquals("Luck", $user->getData()->getUsername());
+        $this->assertEquals("Luck", $user->getUsername());
     }
 
     /**
@@ -132,9 +131,8 @@ class ClientTest extends TestCase
 
         $user = $this->apiClient->findAuthor("Luck");
         $this->assertNotNull($user);
-        $this->assertNotNull($user->getData());
-        $this->assertEquals("Luck", $user->getData()->getUsername());
-        $this->assertEquals(100356, $user->getData()->getId());
+        $this->assertEquals("Luck", $user->getUsername());
+        $this->assertEquals(100356, $user->getId());
     }
 
     /**
@@ -154,7 +152,7 @@ class ClientTest extends TestCase
 
         foreach ($projectList as $project) {
             $this->assertValidProject($project);
-            $this->assertEquals(100356, $project->getData()->getAuthor()->getId());
+            $this->assertEquals(100356, $project->getAuthor()->getId());
         }
     }
 
