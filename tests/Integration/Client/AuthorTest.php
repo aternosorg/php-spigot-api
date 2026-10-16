@@ -23,9 +23,9 @@ class AuthorTest extends TestCase
     /**
      * @throws ApiException
      */
-    public function testGetProjects(): void
+    public function testFetchProjects(): void
     {
-        $projects = $this->author->getProjects();
+        $projects = $this->author->fetchProjects();
         $this->assertNotNull($projects);
         $this->assertNotEmpty($projects);
 
