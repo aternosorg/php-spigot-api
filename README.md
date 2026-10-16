@@ -220,8 +220,8 @@ To request more information about an author from the API, use the methods on the
 // get a specific author (by numeric id)
 $author = $spigotClient->getAuthor(1);
 
-// get projects as a PaginatedProjectList
-$projects = $author->getProjects();
+// fetch the projects from the API as a PaginatedAuthorProjectList (sends a request)
+$projects = $author->fetchProjects();
 ```
 
 ### getAuthorProjects()
