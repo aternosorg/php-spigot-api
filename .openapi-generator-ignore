@@ -30,5 +30,4 @@ git_push.sh
 README.md
 composer.json
 phpunit.xml.dist
-tests/Api/*
-tests/Model/*
+tests/**
