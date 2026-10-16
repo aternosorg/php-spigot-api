@@ -43,6 +43,22 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
         ]);
     }
 
+    public function testExtendsModel(): void
+    {
+        $version = new Version($this->apiClient, $this->getResourceUpdateModel());
+
+        $this->assertInstanceOf(ResourceUpdate::class, $version);
+        $this->assertSame($this->getResourceUpdateModel()->getTitle(), $version->getTitle());
+        $this->assertSame($this->getResourceUpdateModel()->getId(), $version->getId());
+    }
+
+    public function testGetDataReturnsVersion(): void
+    {
+        $version = new Version($this->apiClient, $this->getResourceUpdateModel());
+
+        $this->assertSame($version, $version->getData());
+    }
+
     public function testGetProjectId(): void
     {
         $version = new Version($this->apiClient, $this->getResourceUpdateModel());
@@ -62,8 +78,8 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
 
         $project = $version->getProject();
         $this->assertNotNull($project);
-        $this->assertEquals(57242, $project->getData()->getId());
-        $this->assertEquals("spark", $project->getData()->getTitle());
+        $this->assertEquals(57242, $project->getId());
+        $this->assertEquals("spark", $project->getTitle());
     }
 
 }

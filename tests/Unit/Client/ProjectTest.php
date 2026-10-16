@@ -91,17 +91,46 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
         ]);
     }
 
-    public function testGetCategory(): void
+    public function testExtendsModel(): void
     {
         $project = new Project($this->apiClient, $this->getResourceModel());
 
-        $this->assertSame(Category::SPIGOT_TOOLS_AND_UTILITIES, $project->getCategory());
+        $this->assertInstanceOf(Resource::class, $project);
+        $this->assertSame(57242, $project->getId());
+        $this->assertSame("spark", $project->getTitle());
+        $this->assertSame("1.10.119", $project->getCurrentVersion());
+    }
+
+    public function testGetDataReturnsProject(): void
+    {
+        $project = new Project($this->apiClient, $this->getResourceModel());
+
+        $this->assertSame($project, $project->getData());
+    }
+
+    public function testModelGettersDoNotSendRequests(): void
+    {
+        // the mock handler has no responses, so every request would fail
+        $this->apiClient->setHttpClient(new Client(['handler' => HandlerStack::create(new MockHandler())]));
+        $project = new Project($this->apiClient, $this->getResourceModel());
+
+        $this->assertInstanceOf(ResourceAuthor::class, $project->getAuthor());
+        $this->assertSame("Luck", $project->getAuthor()->getUsername());
+        $this->assertInstanceOf(ResourceCategory::class, $project->getCategory());
+        $this->assertSame("Tools and Utilities", $project->getCategory()->getTitle());
+    }
+
+    public function testGetCategoryType(): void
+    {
+        $project = new Project($this->apiClient, $this->getResourceModel());
+
+        $this->assertSame(Category::SPIGOT_TOOLS_AND_UTILITIES, $project->getCategoryType());
     }
 
     /**
      * @throws ApiException
      */
-    public function testGetAuthor(): void
+    public function testFetchAuthor(): void
     {
         $handler = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . "/Fixtures/getAuthor.json")),
@@ -109,14 +138,14 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
         $this->apiClient->setHttpClient(new Client(['handler' => HandlerStack::create($handler)]));
         $project = new Project($this->apiClient, $this->getResourceModel());
 
-        $author = $project->getAuthor();
+        $author = $project->fetchAuthor();
         $this->assertNotNull($author);
-        $this->assertEquals(100356, $author->getData()->getId());
-        $this->assertEquals("Luck", $author->getData()->getUsername());
-        $this->assertGreaterThan(1, $author->getData()->getResourceCount());
-        $this->assertStringStartsWith("https://www.spigotmc.org/data/avatars", $author->getData()->getAvatar());
+        $this->assertEquals(100356, $author->getId());
+        $this->assertEquals("Luck", $author->getUsername());
+        $this->assertGreaterThan(1, $author->getResourceCount());
+        $this->assertStringStartsWith("https://www.spigotmc.org/data/avatars", $author->getAvatar());
         // 1759349337 -> Wed Oct 01 2025
-        $this->assertGreaterThanOrEqual(1759349337, $author->getData()->getLastActivity());
+        $this->assertGreaterThanOrEqual(1759349337, $author->getLastActivity());
     }
 
 

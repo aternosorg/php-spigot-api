@@ -84,14 +84,14 @@ use Aternos\SpigotApi\Client\SortDirection;
 $projects = $spigotClient->listProjects(1);
 
 foreach ($projects as $project) {
-    // wrappers expose underlying model via getData()
-    echo $project->getData()->getTitle() . PHP_EOL;
+    // wrappers extend the generated models, so all getters can be used directly
+    echo $project->getTitle() . PHP_EOL;
 }
 
 $projects = $projects->getNextPage();
 
 foreach ($projects as $project) {
-    echo $project->getData()->getTitle() . PHP_EOL;
+    echo $project->getTitle() . PHP_EOL;
 }
 
 // list the most downloaded projects
@@ -118,14 +118,14 @@ use Aternos\SpigotApi\Client\SortDirection;
 $projects = $spigotClient->listProjectsForCategory(Category::SPIGOT, 1);
 
 foreach ($projects as $project) {
-    // wrappers expose underlying model via getData()
-    echo $project->getData()->getTitle() . PHP_EOL;
+    // wrappers extend the generated models, so all getters can be used directly
+    echo $project->getTitle() . PHP_EOL;
 }
 
 $projects = $projects->getNextPage();
 
 foreach ($projects as $project) {
-    echo $project->getData()->getTitle() . PHP_EOL;
+    echo $project->getTitle() . PHP_EOL;
 }
 
 // list the most recently updated projects in a category
@@ -145,10 +145,13 @@ To get a single project (resource) by its numeric id, use `getProject()`.
 // get a specific project (by numeric id)
 $project = $spigotClient->getProject(2);
 
-// get data from the wrapper
-$id = $project->getData()->getId();
-$title = $project->getData()->getTitle();
-$description = $project->getData()->getDescription();
+// the wrapper extends the generated model, so all getters of the model can be used directly
+$id = $project->getId();
+$title = $project->getTitle();
+$description = $project->getDescription();
+
+// the category as an Aternos\SpigotApi\Client\Category enum
+$category = $project->getCategoryType();
 ```
 
 ### More information
@@ -167,9 +170,12 @@ $versions = $project->getVersions();
 // get the newest versions first
 $versions = $project->getVersions(1, VersionOrder::POST_DATE, SortDirection::DESC);
 
-// get the author
-$author = $project->getAuthor();
+// fetch the full author from the API
+$author = $project->fetchAuthor();
 ```
+
+`$project->getAuthor()` and `$project->getCategory()` are the getters of the generated model.
+They only contain the id and username of the author and the id, title and description of the category, and do not send a request.
 
 ## Authors
 
@@ -185,12 +191,12 @@ To get a single author by its numeric id, use `getAuthor()`.
 $author = $spigotClient->getAuthor(1);
 
 // get data from the wrapper
-$id = $author->getData()->getId();
-$username = $author->getData()->getUsername();
-$resources = $author->getData()->getResourceCount();
-$identities = $author->getData()->getIdentities();
-$avatarUrl = $author->getData()->getAvatar();
-$activity = $author->getData()->getLastActivity();
+$id = $author->getId();
+$username = $author->getUsername();
+$resources = $author->getResourceCount();
+$identities = $author->getIdentities();
+$avatarUrl = $author->getAvatar();
+$activity = $author->getLastActivity();
 ```
 
 ### findAuthor()
@@ -205,12 +211,12 @@ To find an author by username, use `findAuthor()`.
 $author = $spigotClient->findAuthor("md_5");
 
 // get data from the wrapper
-$id = $author->getData()->getId();
-$username = $author->getData()->getUsername();
-$resources = $author->getData()->getResourceCount();
-$identities = $author->getData()->getIdentities();
-$avatarUrl = $author->getData()->getAvatar();
-$activity = $author->getData()->getLastActivity();
+$id = $author->getId();
+$username = $author->getUsername();
+$resources = $author->getResourceCount();
+$identities = $author->getIdentities();
+$avatarUrl = $author->getAvatar();
+$activity = $author->getLastActivity();
 ```
 
 ### More information
@@ -237,7 +243,7 @@ To list all projects for an author (paginated), use `getAuthorProjects()`.
 // list all projects from Luck
 $projects = $spigotClient->getAuthorProjects(100356);
 foreach ($projects as $project) {
-    echo $project->getData()->getTitle() . PHP_EOL;
+    echo $project->getTitle() . PHP_EOL;
 }
 ```
 
@@ -260,7 +266,7 @@ use Aternos\SpigotApi\Client\VersionOrder;
 
 $versions = $spigotClient->getProjectVersions(2);
 foreach ($versions as $version) {
-    echo $version->getData()->getTitle() . PHP_EOL;
+    echo $version->getTitle() . PHP_EOL;
 }
 
 // list the newest versions first
@@ -277,8 +283,8 @@ To fetch a specific update by its id, use `getVersion()`.
 
 ```php
 $version = $spigotClient->getVersion(352711);
-echo $version->getData()->getTitle() . PHP_EOL;
-echo $version->getData()->getMessage() . PHP_EOL;
+echo $version->getTitle() . PHP_EOL;
+echo $version->getMessage() . PHP_EOL;
 ```
 
 ### More information

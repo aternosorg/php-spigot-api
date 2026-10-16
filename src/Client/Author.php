@@ -4,21 +4,26 @@ namespace Aternos\SpigotApi\Client;
 
 use Aternos\SpigotApi\ApiException;
 use Aternos\SpigotApi\Client\List\PaginatedAuthorProjectList;
-use Aternos\SpigotApi\Model\Author as SpigotAuthor;
+use Aternos\SpigotApi\Model\Author as AuthorModel;
 
-class Author
+class Author extends AuthorModel
 {
 
     public function __construct(
         protected SpigotAPIClient $client,
-        protected SpigotAuthor    $data
+        AuthorModel               $data
     )
     {
+        parent::__construct($data->container);
     }
 
-    public function getData(): SpigotAuthor
+    /**
+     * @deprecated The author extends the generated model now, so its getters can be used directly.
+     * @return AuthorModel
+     */
+    public function getData(): AuthorModel
     {
-        return $this->data;
+        return $this;
     }
 
     /**
@@ -28,7 +33,7 @@ class Author
      */
     public function getId(): int
     {
-        return intval($this->data->getId());
+        return intval(parent::getId());
     }
 
     /**

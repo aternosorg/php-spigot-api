@@ -26,10 +26,10 @@ class ClientTest extends TestCase
         // collect the download counts of all projects from both pages
         $downloadCounts = [];
         foreach ($firstPage as $project) {
-            $downloadCounts[] = $project->getData()->getStats()->getDownloads();
+            $downloadCounts[] = $project->getStats()->getDownloads();
         }
         foreach ($secondPage as $project) {
-            $downloadCounts[] = $project->getData()->getStats()->getDownloads();
+            $downloadCounts[] = $project->getStats()->getDownloads();
         }
         $this->assertNotEmpty($downloadCounts);
 
@@ -47,10 +47,10 @@ class ClientTest extends TestCase
         // collect the post dates of all versions from both pages
         $postDates = [];
         foreach ($firstPage as $version) {
-            $postDates[] = $version->getData()->getPostDate();
+            $postDates[] = $version->getPostDate();
         }
         foreach ($secondPage as $version) {
-            $postDates[] = $version->getData()->getPostDate();
+            $postDates[] = $version->getPostDate();
         }
         $this->assertNotEmpty($postDates);
 
@@ -267,9 +267,9 @@ class ClientTest extends TestCase
     {
         $project = $this->apiClient->getProject(2);
         $this->assertNotNull($project);
-        $this->assertEquals("HubKick", $project->getData()->getTitle());
-        $this->assertEquals("Send players to lobby on kick. /lobby / hub", $project->getData()->getTag());
-        $this->assertEquals(1364368470, $project->getData()->getFirstRelease());
+        $this->assertEquals("HubKick", $project->getTitle());
+        $this->assertEquals("Send players to lobby on kick. /lobby / hub", $project->getTag());
+        $this->assertEquals(1364368470, $project->getFirstRelease());
     }
 
     /**
@@ -297,9 +297,9 @@ class ClientTest extends TestCase
         // PlaceholderAPI by HelpChat
         $version = $this->apiClient->getVersion(352711);
         $this->assertNotNull($version);
-        $this->assertEquals("2.10.9 back to normal", $version->getData()->getTitle());
-        $this->assertEquals(352711, $version->getData()->getId());
-        $this->assertEquals(6245, $version->getData()->getResourceId());
+        $this->assertEquals("2.10.9 back to normal", $version->getTitle());
+        $this->assertEquals(352711, $version->getId());
+        $this->assertEquals(6245, $version->getResourceId());
     }
 
     /**
@@ -309,8 +309,7 @@ class ClientTest extends TestCase
     {
         $author = $this->apiClient->getAuthor(100356);
         $this->assertNotNull($author);
-        $this->assertNotNull($author->getData());
-        $this->assertEquals("Luck", $author->getData()->getUsername());
+        $this->assertEquals("Luck", $author->getUsername());
     }
 
     /**
@@ -320,9 +319,8 @@ class ClientTest extends TestCase
     {
         $author = $this->apiClient->findAuthor("Luck");
         $this->assertNotNull($author);
-        $this->assertNotNull($author->getData());
-        $this->assertEquals("Luck", $author->getData()->getUsername());
-        $this->assertEquals(100356, $author->getData()->getId());
+        $this->assertEquals("Luck", $author->getUsername());
+        $this->assertEquals(100356, $author->getId());
     }
 
 }
