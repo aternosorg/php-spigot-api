@@ -291,8 +291,8 @@ $version = $spigotClient->getVersion(352711);
 // get the ID of the project this version belongs to
 $projectId = $version->getProjectId();
 
-// get the project as a Project wrapper
-$project = $version->getProject();
+// fetch the project from the API as a Project wrapper (sends a request)
+$project = $version->fetchProject();
 ```
 
 ## Updating the generated code

@@ -285,7 +285,7 @@ class ClientTest extends TestCase
         foreach ($versions as $version) {
             $this->assertNotNull($version);
             $this->assertInstanceOf(Version::class, $version);
-            $this->assertEquals($project, $version->getProject());
+            $this->assertEquals($project, $version->fetchProject());
         }
     }
 
