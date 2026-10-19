@@ -52,18 +52,4 @@ class Version
     {
         return $this->client->getProject($this->getProjectId());
     }
-
-    /**
-     * Fetch the project this version belongs to from the API.
-     *
-     * This sends a request to the SpigotMC API every time it is called. The result is not cached.
-     *
-     * @deprecated Use {@see fetchProject()} instead. Methods that send a request to the API are prefixed with "fetch".
-     * @return Project
-     * @throws ApiException
-     */
-    public function getProject(): Project
-    {
-        return $this->fetchProject();
-    }
 }
