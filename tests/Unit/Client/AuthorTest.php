@@ -44,7 +44,28 @@ class AuthorTest extends TestCase
     /**
      * @throws ApiException
      */
-    public function testGetProjects(): void
+    public function testFetchProjects(): void
+    {
+        $handler = new MockHandler([
+            new Response(200, [], file_get_contents(__DIR__ . "/Fixtures/getResourcesByAuthor.json")),
+        ]);
+        $this->apiClient->setHttpClient(new Client(['handler' => HandlerStack::create($handler)]));
+        $author = new Author($this->apiClient, $this->getAuthorModel());
+
+        $projects = $author->fetchProjects();
+        $this->assertNotNull($projects);
+        $this->assertNotEmpty($projects);
+
+        foreach ($projects as $project) {
+            $this->assertValidProject($project);
+            $this->assertEquals($author->getId(), $project->getAuthor()->getId());
+        }
+    }
+
+    /**
+     * @throws ApiException
+     */
+    public function testDeprecatedGetProjectsFetchesProjects(): void
     {
         $handler = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . "/Fixtures/getResourcesByAuthor.json")),
@@ -53,13 +74,8 @@ class AuthorTest extends TestCase
         $author = new Author($this->apiClient, $this->getAuthorModel());
 
         $projects = $author->getProjects();
-        $this->assertNotNull($projects);
         $this->assertNotEmpty($projects);
-
-        foreach ($projects as $project) {
-            $this->assertValidProject($project);
-            $this->assertEquals($author->getId(), $project->getAuthor()->getId());
-        }
+        $this->assertSame(0, $handler->count());
     }
 
 }

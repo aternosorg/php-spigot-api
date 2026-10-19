@@ -7,7 +7,7 @@ The generated code can be found in `src/Api` and `src/Model`.
 It is recommended to use the wrappers in `src/Client` instead of the generated code.
 
 ## Requirements
-- PHP 8.3 or newer  
+- PHP 8.4 or newer  
 - PHP extensions: curl, json, mbstring  
 
 ## Installation
@@ -164,11 +164,11 @@ use Aternos\SpigotApi\Client\VersionOrder;
 // get a specific project (by numeric id)
 $project = $spigotClient->getProject(2);
 
-// get versions as a PaginatedVersionList
-$versions = $project->getVersions();
+// fetch the versions from the API as a PaginatedVersionList (sends a request)
+$versions = $project->fetchVersions();
 
-// get the newest versions first
-$versions = $project->getVersions(1, VersionOrder::POST_DATE, SortDirection::DESC);
+// fetch the newest versions first
+$versions = $project->fetchVersions(1, VersionOrder::POST_DATE, SortDirection::DESC);
 
 // fetch the full author from the API
 $author = $project->fetchAuthor();
@@ -226,8 +226,8 @@ To request more information about an author from the API, use the methods on the
 // get a specific author (by numeric id)
 $author = $spigotClient->getAuthor(1);
 
-// get projects as a PaginatedProjectList
-$projects = $author->getProjects();
+// fetch the projects from the API as a PaginatedAuthorProjectList (sends a request)
+$projects = $author->fetchProjects();
 ```
 
 ### getAuthorProjects()
@@ -297,8 +297,8 @@ $version = $spigotClient->getVersion(352711);
 // get the ID of the project this version belongs to
 $projectId = $version->getProjectId();
 
-// get the project as a Project wrapper
-$project = $version->getProject();
+// fetch the project from the API as a Project wrapper (sends a request)
+$project = $version->fetchProject();
 ```
 
 ## Updating the generated code
