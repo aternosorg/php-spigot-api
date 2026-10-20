@@ -54,21 +54,4 @@ class AuthorTest extends TestCase
             $this->assertEquals($author->getId(), $project->getAuthor()->getId());
         }
     }
-
-    /**
-     * @throws ApiException
-     */
-    public function testDeprecatedGetProjectsFetchesProjects(): void
-    {
-        $handler = new MockHandler([
-            new Response(200, [], file_get_contents(__DIR__ . "/Fixtures/getResourcesByAuthor.json")),
-        ]);
-        $this->apiClient->setHttpClient(new Client(['handler' => HandlerStack::create($handler)]));
-        $author = new Author($this->apiClient, $this->getAuthorModel());
-
-        $projects = $author->getProjects();
-        $this->assertNotEmpty($projects);
-        $this->assertSame(0, $handler->count());
-    }
-
 }

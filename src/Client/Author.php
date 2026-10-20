@@ -30,7 +30,7 @@ class Author extends AuthorModel
     /**
      * Fetch the projects of this author from the API (paginated).
      *
-     * This sends a request to the SpigotMC API every time it is called. The result is not cached.
+     * This sends a request to the SpigotMC API every time it is called.
      *
      * @return PaginatedAuthorProjectList
      * @throws ApiException
@@ -38,19 +38,5 @@ class Author extends AuthorModel
     public function fetchProjects(): PaginatedAuthorProjectList
     {
         return $this->client->getAuthorProjects($this->getId());
-    }
-
-    /**
-     * Fetch the projects of this author from the API (paginated).
-     *
-     * This sends a request to the SpigotMC API every time it is called. The result is not cached.
-     *
-     * @deprecated Use {@see fetchProjects()} instead. Methods that send a request to the API are prefixed with "fetch".
-     * @return PaginatedAuthorProjectList
-     * @throws ApiException
-     */
-    public function getProjects(): PaginatedAuthorProjectList
-    {
-        return $this->fetchProjects();
     }
 }

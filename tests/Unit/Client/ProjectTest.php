@@ -162,22 +162,4 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
             $this->assertEquals($project->getId(), $version->getProjectId());
         }
     }
-
-    /**
-     * @throws ApiException
-     */
-    public function testDeprecatedGetVersionsFetchesVersions(): void
-    {
-        $handler = new MockHandler([
-            new Response(200, [], file_get_contents(__DIR__ . "/Fixtures/getResourceUpdates.json")),
-        ]);
-        $this->apiClient->setHttpClient(new Client(['handler' => HandlerStack::create($handler)]));
-        $project = new Project($this->apiClient, $this->getResourceModel());
-
-        $versions = $project->getVersions();
-        $this->assertNotEmpty($versions);
-        $this->assertSame(0, $handler->count());
-    }
-
-
 }
