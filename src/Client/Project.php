@@ -54,7 +54,7 @@ class Project
     /**
      * Fetch the versions of this project from the API (paginated).
      *
-     * This sends a request to the SpigotMC API every time it is called. The result is not cached.
+     * This sends a request to the SpigotMC API every time it is called.
      *
      * @param int $page
      * @param VersionOrder|null $order Field to order the results by. When null, the API default (id) is used.
