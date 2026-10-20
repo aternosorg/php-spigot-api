@@ -43,7 +43,7 @@ class Version
     /**
      * Fetch the project this version belongs to from the API.
      *
-     * This sends a request to the SpigotMC API every time it is called. The result is not cached.
+     * This sends a request to the SpigotMC API every time it is called.
      *
      * @return Project
      * @throws ApiException

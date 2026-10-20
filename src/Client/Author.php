@@ -34,7 +34,7 @@ class Author
     /**
      * Fetch the projects of this author from the API (paginated).
      *
-     * This sends a request to the SpigotMC API every time it is called. The result is not cached.
+     * This sends a request to the SpigotMC API every time it is called.
      *
      * @return PaginatedAuthorProjectList
      * @throws ApiException
