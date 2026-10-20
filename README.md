@@ -33,7 +33,7 @@ $spigotClient->setUserAgent("my-app/1.0.0 (contact@example.com)");
 ### User Agent
 It is recommended to set a user agent that identifies your application, ideally including contact information.
 If you don't set a user agent, the client sends its own user agent including the installed version,
-e.g. `aternos/php-spigot-api/2.4.0`. A user agent set with `setUserAgent()` replaces it.
+e.g. `aternos/php-spigot-api/3.0.0`. A user agent set with `setUserAgent()` replaces it.
 
 ### Error Handling
 All methods that send a request throw an `Aternos\SpigotApi\ApiException` if the request fails.
