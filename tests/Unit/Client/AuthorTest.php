@@ -34,13 +34,6 @@ class AuthorTest extends TestCase
         $this->assertSame($this->getAuthorModel()->getId(), $author->getId());
     }
 
-    public function testGetDataReturnsAuthor(): void
-    {
-        $author = new Author($this->apiClient, $this->getAuthorModel());
-
-        $this->assertSame($author, $author->getData());
-    }
-
     /**
      * @throws ApiException
      */

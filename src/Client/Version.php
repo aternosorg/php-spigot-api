@@ -17,15 +17,6 @@ class Version extends ResourceUpdate
     }
 
     /**
-     * @deprecated The version extends the generated model now, so its getters can be used directly.
-     * @return ResourceUpdate
-     */
-    public function getData(): ResourceUpdate
-    {
-        return $this;
-    }
-
-    /**
      * Get the ID of the version.
      *
      * @return int

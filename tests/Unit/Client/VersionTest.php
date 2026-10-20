@@ -52,13 +52,6 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
         $this->assertSame($this->getResourceUpdateModel()->getId(), $version->getId());
     }
 
-    public function testGetDataReturnsVersion(): void
-    {
-        $version = new Version($this->apiClient, $this->getResourceUpdateModel());
-
-        $this->assertSame($version, $version->getData());
-    }
-
     public function testGetProjectId(): void
     {
         $version = new Version($this->apiClient, $this->getResourceUpdateModel());

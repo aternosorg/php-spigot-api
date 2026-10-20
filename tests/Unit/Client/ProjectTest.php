@@ -101,13 +101,6 @@ spark\'s profiler can be used to diagnose performance issues: "lag", low tick ra
         $this->assertSame("1.10.119", $project->getCurrentVersion());
     }
 
-    public function testGetDataReturnsProject(): void
-    {
-        $project = new Project($this->apiClient, $this->getResourceModel());
-
-        $this->assertSame($project, $project->getData());
-    }
-
     public function testModelGettersDoNotSendRequests(): void
     {
         // the mock handler has no responses, so every request would fail

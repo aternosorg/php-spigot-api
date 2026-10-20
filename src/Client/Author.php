@@ -18,15 +18,6 @@ class Author extends AuthorModel
     }
 
     /**
-     * @deprecated The author extends the generated model now, so its getters can be used directly.
-     * @return AuthorModel
-     */
-    public function getData(): AuthorModel
-    {
-        return $this;
-    }
-
-    /**
      * Get the ID of the author.
      *
      * @return int

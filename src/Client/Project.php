@@ -18,15 +18,6 @@ class Project extends Resource
     }
 
     /**
-     * @deprecated The project extends the generated model now, so its getters can be used directly.
-     * @return Resource
-     */
-    public function getData(): Resource
-    {
-        return $this;
-    }
-
-    /**
      * Get the ID of the project.
      *
      * @return int
@@ -47,7 +38,9 @@ class Project extends Resource
     }
 
     /**
-     * Fetch the author of the project from the API.
+     * Fetch the author of this project from the API.
+     *
+     * This sends a request to the SpigotMC API every time it is called.
      *
      * @return Author
      * @throws ApiException
