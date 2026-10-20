@@ -33,7 +33,7 @@ class SpigotAPIClient
     }
 
     /**
-     * Get the installed version of this library, e.g. "2.4.0" or "dev-main"
+     * Get the installed version of this library, e.g. "3.0.0" or "dev-main"
      * Returns "unknown" if the version cannot be determined, e.g. if the library was not installed using composer.
      *
      * @return string
@@ -48,7 +48,7 @@ class SpigotAPIClient
     }
 
     /**
-     * Get the user agent that identifies this library, e.g. "aternos/php-spigot-api/2.4.0"
+     * Get the user agent that identifies this library, e.g. "aternos/php-spigot-api/3.0.0"
      * It is used unless a different user agent is set with {@see setUserAgent()}.
      *
      * @return string
