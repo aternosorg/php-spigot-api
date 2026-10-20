@@ -59,39 +59,37 @@ class TestCase extends PHPUnitTestCase
 
     protected function assertValidProject(Project $project): void
     {
-        $this->assertNotNull($project->getData());
+        $this->assertNotNull($project->getStats());
+        $this->assertValidStats($project->getStats());
 
-        $this->assertNotNull($project->getData()->getStats());
-        $this->assertValidStats($project->getData()->getStats());
+        $this->assertNotNull($project->getAuthor());
+        $this->assertValidResourceAuthor($project->getAuthor());
 
-        $this->assertNotNull($project->getData()->getAuthor());
-        $this->assertValidResourceAuthor($project->getData()->getAuthor());
-
-        $this->assertNotNull($project->getData()->getId());
-        $this->assertNotNull($project->getData()->getTitle());
-        $this->assertNotNull($project->getData()->getTag());
-        $this->assertNotNull($project->getData()->getCurrentVersion());
-        // $project->getData()->getNativeMinecraftVersion() can be null
-        // $this->assertNotNull($project->getData()->getSupportedMinecraftVersions()) can be null or empty
-        $this->assertNotNull($project->getData()->getIconLink());
-        $this->assertNotNull($project->getData()->getExternalDownloadUrl());
-        $this->assertNotNull($project->getData()->getDescription());
-        $this->assertNotNull($project->getData()->getFirstRelease());
-        $this->assertNotNull($project->getData()->getLastUpdate());
-        $this->assertNotNull($project->getData()->getSourceCodeUrl());
-        $this->assertNotNull($project->getData()->getDonateUrl());
+        $this->assertNotNull($project->getId());
+        $this->assertNotNull($project->getTitle());
+        $this->assertNotNull($project->getTag());
+        $this->assertNotNull($project->getCurrentVersion());
+        // $project->getNativeMinecraftVersion() can be null
+        // $this->assertNotNull($project->getSupportedMinecraftVersions()) can be null or empty
+        $this->assertNotNull($project->getIconLink());
+        $this->assertNotNull($project->getExternalDownloadUrl());
+        $this->assertNotNull($project->getDescription());
+        $this->assertNotNull($project->getFirstRelease());
+        $this->assertNotNull($project->getLastUpdate());
+        $this->assertNotNull($project->getSourceCodeUrl());
+        $this->assertNotNull($project->getDonateUrl());
     }
 
     protected function assertValidVersion(Version $version): void
     {
         $this->assertNotNull($version->getId());
         $this->assertNotNull($version->getProjectId());
-        $this->assertNotNull($version->getData()->getId());
-        $this->assertNotNull($version->getData()->getResourceId());
-        $this->assertNotNull($version->getData()->getDownloadCount());
-        $this->assertNotNull($version->getData()->getTitle());
-        $this->assertNotNull($version->getData()->getMessage());
-        $this->assertNotNull($version->getData()->getPostDate());
+        $this->assertNotNull($version->getId());
+        $this->assertNotNull($version->getResourceId());
+        $this->assertNotNull($version->getDownloadCount());
+        $this->assertNotNull($version->getTitle());
+        $this->assertNotNull($version->getMessage());
+        $this->assertNotNull($version->getPostDate());
     }
 
     protected function assertValidPaginatedList(PaginatedList $list): void

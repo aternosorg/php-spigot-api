@@ -4,6 +4,7 @@ namespace Aternos\SpigotApi\Tests\Unit\Client;
 
 use Aternos\SpigotApi\ApiException;
 use Aternos\SpigotApi\Client\Author;
+use Aternos\SpigotApi\Model\Author as AuthorModel;
 use Aternos\SpigotApi\Tests\TestCase;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
@@ -12,9 +13,9 @@ use GuzzleHttp\Psr7\Response;
 
 class AuthorTest extends TestCase
 {
-    protected function getAuthorModel(): \Aternos\SpigotApi\Model\Author
+    protected function getAuthorModel(): AuthorModel
     {
-        return new \Aternos\SpigotApi\Model\Author([
+        return new AuthorModel([
             "id" => 100356,
             "username" => "Luck",
             "resource_count" => 4,
@@ -22,6 +23,15 @@ class AuthorTest extends TestCase
             "avatar" => "https://www.spigotmc.org/data/avatars/l/100/100356.jpg?1655500321",
             "last_activity" => 1759349337
         ]);
+    }
+
+    public function testExtendsModel(): void
+    {
+        $author = new Author($this->apiClient, $this->getAuthorModel());
+
+        $this->assertInstanceOf(AuthorModel::class, $author);
+        $this->assertSame($this->getAuthorModel()->getUsername(), $author->getUsername());
+        $this->assertSame($this->getAuthorModel()->getId(), $author->getId());
     }
 
     /**
@@ -41,7 +51,7 @@ class AuthorTest extends TestCase
 
         foreach ($projects as $project) {
             $this->assertValidProject($project);
-            $this->assertEquals($author->getId(), $project->getData()->getAuthor()->getId());
+            $this->assertEquals($author->getId(), $project->getAuthor()->getId());
         }
     }
 }

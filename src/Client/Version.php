@@ -5,19 +5,15 @@ namespace Aternos\SpigotApi\Client;
 use Aternos\SpigotApi\ApiException;
 use Aternos\SpigotApi\Model\ResourceUpdate;
 
-class Version
+class Version extends ResourceUpdate
 {
 
     public function __construct(
         protected SpigotAPIClient $client,
-        protected ResourceUpdate  $data
+        ResourceUpdate            $data
     )
     {
-    }
-
-    public function getData(): ResourceUpdate
-    {
-        return $this->data;
+        parent::__construct($data->container);
     }
 
     /**
@@ -27,7 +23,7 @@ class Version
      */
     public function getId(): int
     {
-        return intval($this->data->getId());
+        return intval(parent::getId());
     }
 
     /**
@@ -37,7 +33,7 @@ class Version
      */
     public function getProjectId(): int
     {
-        return intval($this->getData()->getResourceId());
+        return intval($this->getResourceId());
     }
 
     /**
